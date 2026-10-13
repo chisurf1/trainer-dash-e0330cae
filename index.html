@@ -1,0 +1,51 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Douglas — Daily</title><style>
+body{font-family:system-ui,sans-serif;margin:0;background:#f4f5f7;color:#222}main{max-width:640px;margin:auto;padding:12px}
+.card{background:#fff;border-radius:12px;padding:14px 16px;margin:12px 0;box-shadow:0 1px 3px #0002}h1{font-size:1.3em;margin:8px 4px}h2{font-size:1.05em;margin:0 0 8px}
+.note{font-size:.85em;color:#a35200;background:#fff4e5;padding:6px 8px;border-radius:6px;margin-top:8px}label{display:block;padding:6px 0}
+.skip{text-decoration:line-through;color:#999}.btns button{margin:4px 4px 0 0;padding:8px 12px;border:1px solid #ccc;border-radius:8px;background:#fafafa}
+.btns button.sel{background:#2563eb;color:#fff;border-color:#2563eb}.strip{display:flex;gap:4px;margin-top:10px}.strip div{flex:1;text-align:center;font-size:.7em;padding:6px 0;border-radius:6px;background:#eee}
+.on{background:#bbf7d0!important}.off{background:#fecaca!important}.fast{background:#e0e7ff!important}.w{display:flex;gap:8px}.w div{flex:1;text-align:center;background:#f4f5f7;border-radius:8px;padding:10px}.big{font-size:1.4em;font-weight:600}
+.cd{font-size:1.8em;font-weight:700}</style></head><body><main>
+<h1 id="hd">Daily dashboard</h1>
+<div class="card"><h2>🏃 Today's challenge</h2><div id="ch"></div><div class="note" id="cons"></div></div>
+<div class="card"><h2>💊 Stack</h2><div id="stack"></div><a href="https://docs.google.com/document/d/10XvIu8CWiMB__vOSfferz-eUcGYdj6iUmoiuUZLcJXw/edit" target="_blank">Health's stack doc ↗</a></div>
+<div class="card"><h2>🥩 Keto plate (~20 g net carbs)</h2><div class="btns" id="keto"></div><div class="strip" id="strip"></div></div>
+<div class="card"><h2>⌚ WHOOP</h2><div class="w" id="whoop"></div><div id="wn" style="color:#999;margin-top:6px"></div></div>
+<div class="card"><h2>🧪 WHOOP Advanced Labs</h2><div class="cd" id="cd"></div>
+<div>Wed Oct 21, 2026 · 9:20 AM ET<br>St Joseph, 2500 Niles Rd Ste 10B</div>
+<ul><li>Oct 20–21: pause Omega-D3 and Centrum</li><li>Skip Dose / IM8</li><li>Oct 21 AM: skip creatine</li><li>Keep aspirin, Citrucel, Qunol, MCT, magnesium, atorvastatin</li></ul></div>
+<div class="card" id="notes" hidden></div>
+</main><script>
+const STACK={"Morning (~8 AM)":[["asp","Bayer aspirin 81 mg"],["cre","Thorne creatine ~5 g in water"],["cit","Citrucel, 1 tablet"]],
+"First meal (~1 PM)":[["omg","Nordic Omega-D3 Sport, 2 softgels"],["qun","Qunol Mega Ubiquinol 100 mg, 1 softgel"],["cen","Centrum Silver, 1 tablet"],["mct","MCT oil ½–1 tsp with food"]],
+"Bedtime":[["mag","Doctor's Best magnesium 200 mg (2 tablets)"],["ator","Atorvastatin 80 mg"]]};
+function skipped(id,d){if((d=="2026-10-20"||d=="2026-10-21")&&(id=="omg"||id=="cen"))return"Labs prep: skip";if(d=="2026-10-21"&&id=="cre")return"Labs morning: skip";}
+const etDate=new Date().toLocaleDateString("en-CA",{timeZone:"America/New_York"});
+const LS=k=>JSON.parse(localStorage.getItem(k)||"null"),SS=(k,v)=>localStorage.setItem(k,JSON.stringify(v));
+fetch("data.json?"+Date.now()).then(r=>r.json()).then(D=>{
+const day=etDate;document.getElementById("hd").textContent="Douglas · "+new Date(day+"T12:00").toDateString();
+document.getElementById("ch").innerHTML=(D.date!=day?"<i>(Challenge from "+D.date+"; today's not posted yet)</i><br>":"")+D.challenge;
+const c=document.getElementById("cons");D.constraint?c.textContent=D.constraint:c.remove();
+const sk="stack:"+day,st=LS(sk)||{};let h="";
+for(const[g,items]of Object.entries(STACK)){h+="<b>"+g+"</b>";for(const[id,n]of items){const s=skipped(id,day);
+h+=s?`<label class="skip">${n} — ${s}</label>`:`<label><input type=checkbox data-id=${id} ${st[id]?"checked":""}> ${n}</label>`;}}
+if(day=="2026-10-20"||day=="2026-10-21")h+='<div class="note">Labs prep: skip Dose / IM8.</div>';
+const se=document.getElementById("stack");se.innerHTML=h;se.onchange=e=>{st[e.target.dataset.id]=e.target.checked;SS(sk,st)};
+const kl=Object.assign({},D.keto_seed||{},LS("keto")||{});
+function rk(){const opts=[["on","On plan"],["off","Went off"],["fast","Skipped / fasting"]];
+document.getElementById("keto").innerHTML=opts.map(([v,t])=>`<button data-v=${v} class="${kl[day]==v?"sel":""}">${t}</button>`).join("");
+let s="";for(let i=6;i>=0;i--){const dt=new Date(day+"T12:00");dt.setDate(dt.getDate()-i);const k=dt.toLocaleDateString("en-CA");
+s+=`<div class="${kl[k]||""}">${dt.toLocaleDateString("en-US",{weekday:"short"})}<br>${kl[k]=="on"?"✓":kl[k]=="off"?"✗":kl[k]=="fast"?"–":"·"}</div>`;}
+document.getElementById("strip").innerHTML=s;}
+document.getElementById("keto").onclick=e=>{const v=e.target.dataset.v;if(!v)return;kl[day]=v;const s=LS("keto")||{};s[day]=v;SS("keto",s);rk()};rk();
+const W=D.whoop||{},f=(v,u)=>v==null?"<span style='color:#999'>—</span>":v+u;
+document.getElementById("whoop").innerHTML=(W.recovery==null&&W.sleep==null&&W.strain==null&&D.date==day?"":"")+
+`<div>Recovery<div class=big>${f(W.recovery,"%")}</div></div><div>Sleep<div class=big>${f(W.sleep,"%")}</div></div><div>Strain<div class=big>${f(W.strain,"")}</div></div>`;
+if(W.recovery==null&&W.sleep==null&&W.strain==null)document.getElementById("wn").textContent="No WHOOP data today";
+if(D.notes){const n=document.getElementById("notes");n.hidden=false;n.textContent=D.notes;}
+});
+function tick(){const t=new Date("2026-10-21T09:20:00-04:00")-new Date();const e=document.getElementById("cd");
+if(t<=0){e.textContent="Labs day — done or in progress";return}const d=Math.floor(t/864e5),hh=Math.floor(t%864e5/36e5),m=Math.floor(t%36e5/6e4);e.textContent=`${d}d ${hh}h ${m}m`;}
+tick();setInterval(tick,30000);
+</script></body></html>

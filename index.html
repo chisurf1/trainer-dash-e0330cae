@@ -8,7 +8,7 @@ body{font-family:system-ui,sans-serif;margin:0;background:#0f1115;color:#e6e8eb;
 .on{background:#14532d!important;color:#bbf7d0!important}.off{background:#7f1d1d!important;color:#fecaca!important}.fast{background:#312e81!important;color:#e0e7ff!important}.w{display:flex;gap:8px}.w div{flex:1;text-align:center;background:#232833;border-radius:8px;padding:10px}.big{font-size:1.4em;font-weight:600}
 .cd{font-size:1.8em;font-weight:700}</style></head><body><main>
 <h1 id="hd">Daily dashboard</h1>
-<div class="card"><h2>🏃 Today's challenge</h2><div id="ch"></div><div class="note" id="cons"></div></div>
+<div class="card"><h2>🏃 Today's challenge</h2><div id="ch"></div><div class="note" id="cons"></div><div id="items"></div><div class="strip" id="wstrip"></div></div>
 <div class="card"><h2>💊 Stack</h2><div id="stack"></div><a href="https://docs.google.com/document/d/10XvIu8CWiMB__vOSfferz-eUcGYdj6iUmoiuUZLcJXw/edit" target="_blank">Health's stack doc ↗</a></div>
 <div class="card"><h2>🥩 Keto plate (~20 g net carbs)</h2><div class="btns" id="keto"></div><div class="strip" id="strip"></div></div>
 <div class="card"><h2>⌚ WHOOP</h2><div class="w" id="whoop"></div><div id="wn" style="color:#8a909c;margin-top:6px"></div></div>
@@ -26,6 +26,12 @@ const LS=k=>JSON.parse(localStorage.getItem(k)||"null"),SS=(k,v)=>localStorage.s
 fetch("data.json?"+Date.now()).then(r=>r.json()).then(D=>{
 const day=etDate;document.getElementById("hd").textContent="Douglas · "+new Date(day+"T12:00").toDateString();
 document.getElementById("ch").innerHTML=(D.date!=day?"<i>(Challenge from "+D.date+"; today's not posted yet)</i><br>":"")+D.challenge;
+const its=D.date==day?(D.items||[]):[],wk="work:"+day,ws=LS(wk)||{};
+document.getElementById("items").innerHTML=its.length?"<div style='margin-top:10px'><b>Checklist</b></div>"+its.map((t,i)=>`<label><input type=checkbox data-i=${i} ${ws[i]?"checked":""}> ${t}</label>`).join(""):"";
+function wsr(){const H=LS("workhist")||{};if(its.length)H[day]=its.some((t,i)=>ws[i]&&!/optional/i.test(t))||its.every((t,i)=>ws[i])?(its.every((t,i)=>ws[i]||/optional/i.test(t))?"on":"fast"):"";SS("workhist",H);
+let s="";for(let i=6;i>=0;i--){const dt=new Date(day+"T12:00");dt.setDate(dt.getDate()-i);const k=dt.toLocaleDateString("en-CA");s+=`<div class="${H[k]||""}">${dt.toLocaleDateString("en-US",{weekday:"short"})}<br>${H[k]=="on"?"✓":H[k]=="fast"?"½":"·"}</div>`;}
+document.getElementById("wstrip").innerHTML=its.length?s:"";}
+document.getElementById("items").onchange=e=>{ws[e.target.dataset.i]=e.target.checked;SS(wk,ws);wsr()};wsr();
 const c=document.getElementById("cons");D.constraint?c.textContent=D.constraint:c.remove();
 const sk="stack:"+day,st=LS(sk)||{};let h="";
 for(const[g,items]of Object.entries(STACK)){h+="<b>"+g+"</b>";for(const[id,n]of items){const s=skipped(id,day);

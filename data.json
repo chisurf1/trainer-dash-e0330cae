@@ -3,15 +3,16 @@
   "challenge": "Welcome to Cape San Blas! Monday's rest did its job, so today we ease back in on the sand: a 30–35 minute beach walk with 4 one-minute easy jogs on the firm sand by the waterline, then a 5-minute cool-down walk. It's clear and calm down there but heads to 82°F and humid, so go early evening around 5–6 PM ET, or first thing if you land early. If travel runs long or the cold's still hanging on, a plain 30-minute walk still counts.",
   "constraint": "Walks and runs only through Fri Oct 16.",
   "whoop": {
-    "recovery": null,
-    "sleep": null,
-    "strain": null
+    "recovery": 71.0,
+    "sleep": 82.0,
+    "strain": 5.3
   },
   "keto_seed": {
     "2026-10-09": "off",
     "2026-10-10": "off",
     "2026-10-11": "on",
-    "2026-10-12": "on"
+    "2026-10-12": "on",
+    "2026-10-13": "off"
   },
   "notes": "",
   "items": [

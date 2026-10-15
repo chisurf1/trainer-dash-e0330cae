@@ -1,12 +1,19 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Douglas — Daily</title><style>
-body{font-family:system-ui,sans-serif;margin:0;background:#0f1115;color:#e6e8eb;color-scheme:dark}a{color:#7cb4ff}main{max-width:640px;margin:auto;padding:12px}
-.card{background:#1a1d24;border-radius:12px;padding:14px 16px;margin:12px 0;box-shadow:0 1px 3px #0008;border:1px solid #2a2f3a}h1{font-size:1.3em;margin:8px 4px}h2{font-size:1.05em;margin:0 0 8px}
-.note{font-size:.85em;color:#ffc078;background:#3a2a12;padding:6px 8px;border-radius:6px;margin-top:8px}label{display:block;padding:6px 0}
-.skip{text-decoration:line-through;color:#7a808c}input[type=checkbox]{accent-color:#3b82f6;width:18px;height:18px;vertical-align:middle}.btns button{margin:4px 4px 0 0;padding:8px 12px;border:1px solid #3a4150;border-radius:8px;background:#232833;color:#e6e8eb}
-.btns button.sel{background:#2563eb;color:#fff;border-color:#2563eb}.strip{display:flex;gap:4px;margin-top:10px}.strip div{flex:1;text-align:center;font-size:.7em;padding:6px 0;border-radius:6px;background:#232833;color:#c4c8d0}
-.on{background:#14532d!important;color:#bbf7d0!important}.off{background:#7f1d1d!important;color:#fecaca!important}.fast{background:#312e81!important;color:#e0e7ff!important}.w{display:flex;gap:8px}.w div{flex:1;text-align:center;background:#232833;border-radius:8px;padding:10px}.big{font-size:1.4em;font-weight:600}
-.cd{font-size:1.8em;font-weight:700}.score{font-size:3em;font-weight:800;line-height:1}.bd{font-size:.85em;color:#c4c8d0;margin:8px 0}.hi{background:#14532d!important;color:#bbf7d0!important}.md{background:#713f12!important;color:#fde68a!important}.lo{background:#7f1d1d!important;color:#fecaca!important}
+:root{--bg:#0f1220;--card:#181c30;--t:#e8e9f3;--m:#9aa0bd;--a:#f5b942;--g:#3ccf8e;--r:#e5566b;--b:#5b8cff;--c2:#23284a}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--t);color-scheme:dark}a{color:var(--a)}
+main{max-width:720px;margin:auto;padding:16px}h1{font-size:1.4rem;margin:20px 0 4px}
+.card{background:var(--card);border-radius:16px;padding:16px;margin:12px 0}h2{font-size:1rem;margin:0 0 10px;color:var(--m);text-transform:uppercase;letter-spacing:.05em}
+#ch{font-size:1.05rem;line-height:1.5}b{color:var(--t)}
+.note{font-size:.85rem;color:var(--a);background:#2c2a3a;border-left:3px solid var(--a);padding:6px 10px;border-radius:8px;margin-top:10px}label{display:block;padding:7px 0}
+.skip{text-decoration:line-through;color:var(--m)}input[type=checkbox]{accent-color:var(--a);width:18px;height:18px;vertical-align:middle}
+.btns button{margin:4px 4px 0 0;padding:8px 14px;border:0;border-radius:8px;background:var(--c2);color:var(--t);font-size:.95rem}
+.btns button.sel{background:var(--a);color:#1a1205;font-weight:700}
+.strip{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;margin-top:10px}.strip div{text-align:center;font-size:.75rem;padding:7px 0;border-radius:8px;background:var(--c2);color:var(--m)}
+.on,.hi{background:var(--g)!important;color:#06210f!important;font-weight:700}.off,.lo{background:var(--r)!important;color:#fff!important;font-weight:700}.fast{background:var(--b)!important;color:#fff!important;font-weight:700}.md{background:var(--a)!important;color:#1a1205!important;font-weight:700}
+.w{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.w div{text-align:center;background:var(--c2);border-radius:14px;padding:12px;color:var(--m);font-size:.8rem}.big{font-size:1.6rem;font-weight:700;color:var(--a)}
+.cd{font-size:1.6rem;font-weight:800;color:var(--a)}ul{padding-left:18px;margin:6px 0}li{margin:4px 0}
+.score{font-size:3rem;font-weight:800;line-height:1;color:var(--a)}.bd{font-size:.85rem;color:var(--m);margin:8px 0}
 </style></head><body><main>
 <h1 id="hd">Daily dashboard</h1>
 <div class="card"><h2>📊 Day score</h2><div class="score" id="sc">0</div>

@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-14",
-  "challenge": "Day two at Cape San Blas, still walks/runs only: easy run/walk intervals for 25–30 minutes — alternate about 2 minutes easy jog with 1 minute walk, then a short cool-down. Sunny and heading toward ~86°F with almost no rain, so go early or after ~5 PM local. If legs feel flat or the cold's still whispering, a plain 30-minute walk still counts.",
+  "date": "2026-10-15",
+  "challenge": "Day three at Cape San Blas, still walks/runs only: a 35–40 minute beach walk with 6 short pickups — about 30 seconds of easy jogging, then walk until your breathing settles. Clear skies, ~68°F early and topping out near 81°F with no rain, so the morning is ideal. WHOOP is signed out, so go by feel: if the cold's lingering or legs are heavy, skip the pickups and just walk.",
   "constraint": "Walks and runs only through Fri Oct 16.",
   "whoop": {
-    "recovery": 44.0,
-    "sleep": 85.0,
-    "strain": 4.0
+    "recovery": null,
+    "sleep": null,
+    "strain": null
   },
   "keto_seed": {
     "2026-10-09": "off",
@@ -16,7 +16,8 @@
   },
   "notes": "",
   "items": [
-    "25–30 min easy run/walk intervals",
-    "Plain 30-min walk (optional)"
+    "35–40 min beach walk",
+    "6 x 30-sec easy jog pickups",
+    "Extra 15-min easy jog (optional)"
   ]
 }

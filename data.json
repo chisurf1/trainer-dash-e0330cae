@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-15",
-  "challenge": "Day three at Cape San Blas, still walks/runs only: a 35–40 minute beach walk with 6 short pickups — about 30 seconds of easy jogging, then walk until your breathing settles. Clear skies, ~68°F early and topping out near 81°F with no rain, so the morning is ideal. WHOOP is signed out, so go by feel: if the cold's lingering or legs are heavy, skip the pickups and just walk.",
-  "constraint": "Walks and runs only through Fri Oct 16.",
+  "date": "2026-10-16",
+  "challenge": "Last Cape San Blas day, still walks/runs only, and WHOOP says you're recovered (83% green, 86% sleep). Step it up: 10-min easy beach walk, then 5 rounds of 3 min easy jog + 1 min walk (20 min), then a 10-min cool-down walk. Overcast, ~69°F now, low 80s by early afternoon, almost no rain chance, so go this morning. If the cold flares or breathing feels tight, drop to 2-min jogs.",
+  "constraint": "Walks and runs only through today (Fri Oct 16). Back to the normal mix in New Buffalo from Sat.",
   "whoop": {
-    "recovery": 35.0,
-    "sleep": 82.0,
-    "strain": 9.4
+    "recovery": 83.0,
+    "sleep": 86.0,
+    "strain": 1.7
   },
   "keto_seed": {
     "2026-10-09": "off",
@@ -16,8 +16,9 @@
   },
   "notes": "",
   "items": [
-    "35–40 min beach walk",
-    "6 x 30-sec easy jog pickups",
-    "Extra 15-min easy jog (optional)"
+    "10-min easy beach walk warm-up",
+    "5 x (3-min easy jog + 1-min walk)",
+    "10-min cool-down walk",
+    "4 x 20-sec relaxed strides on firm sand (optional)"
   ]
 }

@@ -3,9 +3,9 @@
   "challenge": "Day three at Cape San Blas, still walks/runs only: a 35–40 minute beach walk with 6 short pickups — about 30 seconds of easy jogging, then walk until your breathing settles. Clear skies, ~68°F early and topping out near 81°F with no rain, so the morning is ideal. WHOOP is signed out, so go by feel: if the cold's lingering or legs are heavy, skip the pickups and just walk.",
   "constraint": "Walks and runs only through Fri Oct 16.",
   "whoop": {
-    "recovery": null,
-    "sleep": null,
-    "strain": null
+    "recovery": 35.0,
+    "sleep": 82.0,
+    "strain": 9.4
   },
   "keto_seed": {
     "2026-10-09": "off",

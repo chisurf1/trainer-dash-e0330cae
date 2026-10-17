@@ -3,9 +3,9 @@
   "challenge": "Back to the normal mix in New Buffalo, eased in since this is the first strength day after the cold and WHOOP couldn't be read this morning. Sunny and calm but cold: about 38°F now, low 50s from 1 to 6 PM, no rain. Do a brisk walk around midday, then a moderate Total Gym upper session and pushups. Kayak's out today (lake about 61°F with leftover 3 to 4 ft waves). If it's a drive day, just do the walk and pushups.",
   "constraint": "",
   "whoop": {
-    "recovery": null,
-    "sleep": null,
-    "strain": null
+    "recovery": 93.0,
+    "sleep": 80.0,
+    "strain": 0.1
   },
   "keto_seed": {
     "2026-10-09": "off",

@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-16",
-  "challenge": "Last Cape San Blas day, still walks/runs only, and WHOOP says you're recovered (83% green, 86% sleep). Step it up: 10-min easy beach walk, then 5 rounds of 3 min easy jog + 1 min walk (20 min), then a 10-min cool-down walk. Overcast, ~69°F now, low 80s by early afternoon, almost no rain chance, so go this morning. If the cold flares or breathing feels tight, drop to 2-min jogs.",
-  "constraint": "Walks and runs only through today (Fri Oct 16). Back to the normal mix in New Buffalo from Sat.",
+  "date": "2026-10-17",
+  "challenge": "Back to the normal mix in New Buffalo, eased in since this is the first strength day after the cold and WHOOP couldn't be read this morning. Sunny and calm but cold: about 38°F now, low 50s from 1 to 6 PM, no rain. Do a brisk walk around midday, then a moderate Total Gym upper session and pushups. Kayak's out today (lake about 61°F with leftover 3 to 4 ft waves). If it's a drive day, just do the walk and pushups.",
+  "constraint": "",
   "whoop": {
-    "recovery": 83.0,
-    "sleep": 86.0,
-    "strain": 1.7
+    "recovery": null,
+    "sleep": null,
+    "strain": null
   },
   "keto_seed": {
     "2026-10-09": "off",
@@ -16,9 +16,9 @@
   },
   "notes": "",
   "items": [
-    "10-min easy beach walk warm-up",
-    "5 x (3-min easy jog + 1-min walk)",
-    "10-min cool-down walk",
-    "4 x 20-sec relaxed strides on firm sand (optional)"
+    "25-min brisk walk (midday, low 50s)",
+    "Total Gym upper: 3 x 12 rows, 3 x 10 chest press, 2 x 12 curls (moderate incline)",
+    "Pushups: 3 x 10",
+    "10-min easy jog after the walk (optional)"
   ]
 }

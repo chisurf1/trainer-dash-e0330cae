@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-17",
-  "challenge": "Back to the normal mix in New Buffalo, eased in since this is the first strength day after the cold and WHOOP couldn't be read this morning. Sunny and calm but cold: about 38°F now, low 50s from 1 to 6 PM, no rain. Do a brisk walk around midday, then a moderate Total Gym upper session and pushups. Kayak's out today (lake about 61°F with leftover 3 to 4 ft waves). If it's a drive day, just do the walk and pushups.",
+  "date": "2026-10-18",
+  "challenge": "Fresh legs after a full rest Saturday (strain 0.1, recovery 93% yesterday), so let's pick up the upper session that didn't happen and add a little running. Sunny and dry in New Buffalo: about 39°F now, warming to around 60°F from 2 to 5 PM, breezy (up to ~15 mph). Go out mid-afternoon for a walk with easy run pickups, then Total Gym upper and pushups. Kayak's still out with that wind on the lake. WHOOP hadn't scored today's recovery yet this morning, so back off if you feel flat.",
   "constraint": "",
   "whoop": {
-    "recovery": 93.0,
-    "sleep": 80.0,
-    "strain": 0.1
+    "recovery": null,
+    "sleep": null,
+    "strain": null
   },
   "keto_seed": {
     "2026-10-09": "off",
@@ -16,9 +16,9 @@
   },
   "notes": "",
   "items": [
-    "25-min brisk walk (midday, low 50s)",
+    "30-min walk with 5 x 1-min easy run pickups (mid-afternoon, ~60°F)",
     "Total Gym upper: 3 x 12 rows, 3 x 10 chest press, 2 x 12 curls (moderate incline)",
-    "Pushups: 3 x 10",
-    "10-min easy jog after the walk (optional)"
+    "Pushups: 3 x 12",
+    "Total Gym squats: 2 x 15, light (optional)"
   ]
 }

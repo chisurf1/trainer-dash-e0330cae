@@ -19,7 +19,7 @@ main{max-width:720px;margin:auto;padding:16px}h1{font-size:1.4rem;margin:20px 0 
 <div class="card"><h2>📊 Day score</h2><div class="score" id="sc">0</div>
 <div class="bd" id="sb"></div><div class="strip" id="sstrip"></div></div>
 <div class="card"><h2>🏃 Today's challenge</h2><div id="ch"></div><div class="note" id="cons"></div><div id="items"></div><div class="strip" id="wstrip"></div></div>
-<div class="card"><h2>💊 Stack</h2><div id="stack"></div><a href="https://docs.google.com/document/d/10XvIu8CWiMB__vOSfferz-eUcGYdj6iUmoiuUZLcJXw/edit" target="_blank">Health's stack doc ↗</a></div>
+<div class="card"><h2>💊 Stack</h2><div id="stack"></div><a href="https://docs.google.com/document/d/1ybwguvuOmtFrXdg-y0yA52LfPQsZRQaLWw6Zjj_Vsl8/edit" target="_blank">Health's stack doc ↗</a></div>
 <div class="card"><h2>🥩 Keto plate (~20 g net carbs)</h2><div class="btns" id="keto"></div><div class="strip" id="strip"></div></div>
 <div class="card"><h2>⌚ WHOOP</h2><div class="w" id="whoop"></div><div id="wn" style="color:#8a909c;margin-top:6px"></div></div>
 <div class="card"><h2>🧪 WHOOP Advanced Labs</h2><div class="cd" id="cd"></div>
@@ -27,7 +27,7 @@ main{max-width:720px;margin:auto;padding:16px}h1{font-size:1.4rem;margin:20px 0 
 <ul><li>Oct 20–21: pause Omega-D3 and Centrum</li><li>Skip Dose / IM8</li><li>Oct 21 AM: skip creatine</li><li>Keep aspirin, Citrucel, Qunol, MCT, magnesium, atorvastatin</li></ul></div>
 <div class="card" id="notes" hidden></div>
 </main><script>
-const STACK={"Morning (~8 AM)":[["asp","Bayer aspirin 81 mg"],["cre","Thorne creatine ~5 g in water"],["cit","Citrucel, 1 tablet"]],
+const STACK={"Morning (~8 AM)":[["asp","Bayer aspirin 81 mg"],["cre","Thorne creatine ~5 g in water"],["cit","Citrucel, 2 servings"]],
 "First meal (~1 PM)":[["omg","Nordic Omega-D3 Sport, 2 softgels"],["qun","Qunol Mega Ubiquinol 100 mg, 1 softgel"],["cen","Centrum Silver, 1 tablet"],["mct","MCT oil ½–1 tsp with food"]],
 "Bedtime":[["mag","Doctor's Best magnesium 200 mg (2 tablets)"],["ator","Atorvastatin 80 mg"]]};
 function skipped(id,d){if((d=="2026-10-20"||d=="2026-10-21")&&(id=="omg"||id=="cen"))return"Labs prep: skip";if(d=="2026-10-21"&&id=="cre")return"Labs morning: skip";}

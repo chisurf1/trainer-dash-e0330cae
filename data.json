@@ -3,9 +3,9 @@
   "challenge": "Nothing logged over the weekend, so you're well rested. Today's the calmest afternoon in a while in New Buffalo: dry, about 40°F now warming to around 61°F from 1 to 5 PM, with light wind (5 to 7 mph). That makes it a good kayak day. Paddle easy in the early afternoon, then do Total Gym legs and pushups at a moderate effort. Labs are Wednesday morning, so keep it moderate and skip anything to failure. WHOOP hadn't scored today's recovery yet this morning, so go by feel.",
   "constraint": "",
   "whoop": {
-    "recovery": null,
-    "sleep": null,
-    "strain": null
+    "recovery": 67.0,
+    "sleep": 84.0,
+    "strain": 1.3
   },
   "keto_seed": {
     "2026-10-09": "off",

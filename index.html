@@ -31,7 +31,7 @@ const STACK={"Morning (~8 AM)":[["asp","Bayer aspirin 81 mg"],["cre","Thorne cre
 "First meal (~1 PM)":[["omg","Nordic Omega-D3 Sport, 2 softgels"],["qun","Qunol Mega Ubiquinol 100 mg, 1 softgel"],["cen","Centrum Silver, 1 tablet"],["mct","MCT oil ½–1 tsp with food"]],
 "Bedtime":[["mag","Doctor's Best magnesium 200 mg (2 tablets)"],["ator","Atorvastatin 80 mg"]]};
 function skipped(id,d){if((d=="2026-10-20"||d=="2026-10-21")&&(id=="omg"||id=="cen"))return"Labs prep: skip";if(d=="2026-10-21"&&id=="cre")return"Labs morning: skip";}
-const etDate=new Date().toLocaleDateString("en-CA",{timeZone:"America/New_York"});
+const etDate=(()=>{const n=new Date(),p=Object.fromEntries(new Intl.DateTimeFormat("en-CA",{timeZone:"America/New_York",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).formatToParts(n).map(x=>[x.type,x.value]));let d=new Date(Date.UTC(+p.year,+p.month-1,+p.day));if(+p.hour*60+ +p.minute<510)d.setUTCDate(d.getUTCDate()-1);return d.toISOString().slice(0,10);})(); // day rolls over at 8:30 AM ET
 const LS=k=>JSON.parse(localStorage.getItem(k)||"null"),SS=(k,v)=>localStorage.setItem(k,JSON.stringify(v));
 fetch("data.json?"+Date.now()).then(r=>r.json()).then(D=>{
 const day=etDate;document.getElementById("hd").textContent="Douglas · "+new Date(day+"T12:00").toDateString();

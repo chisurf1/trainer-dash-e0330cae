@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-19",
-  "challenge": "Nothing logged over the weekend, so you're well rested. Today's the calmest afternoon in a while in New Buffalo: dry, about 40°F now warming to around 61°F from 1 to 5 PM, with light wind (5 to 7 mph). That makes it a good kayak day. Paddle easy in the early afternoon, then do Total Gym legs and pushups at a moderate effort. Labs are Wednesday morning, so keep it moderate and skip anything to failure. WHOOP hadn't scored today's recovery yet this morning, so go by feel.",
-  "constraint": "",
+  "date": "2026-10-20",
+  "challenge": "Labs are tomorrow at 9:20 AM, so today is a light day: hard lifting can bump muscle and liver enzymes on a blood draw. New Buffalo is dry and calm again, about 39°F now and around 62°F from 1 to 5 PM with light wind (2 to 8 mph). Do an easy early-afternoon paddle or a brisk walk, then a short set of easy pushups and some mobility. Nothing to failure. WHOOP was signed out on my computer this morning, so go by feel.",
+  "constraint": "Labs eve: keep it light and skip anything heavy or to failure until after tomorrow's 9:20 AM draw.",
   "whoop": {
-    "recovery": 67.0,
-    "sleep": 84.0,
-    "strain": 1.3
+    "recovery": null,
+    "sleep": null,
+    "strain": null
   },
   "keto_seed": {
     "2026-10-09": "off",
@@ -16,9 +16,9 @@
   },
   "notes": "",
   "items": [
-    "Kayak 30–40 min, easy steady paddle (early afternoon, ~60°F, light wind)",
-    "Total Gym legs: 3 x 15 squats, 2 x 12 single-leg squats each side, 2 x 15 calf raises (moderate incline)",
-    "Pushups: 3 x 12",
-    "20-min easy walk (optional)"
+    "Easy kayak 30 min OR brisk 30–40 min walk (early afternoon, ~62°F, light wind)",
+    "Pushups: 2 x 10, easy, well short of failure",
+    "10 min mobility and stretching (hips, hamstrings, shoulders)",
+    "Total Gym light upper, 2 x 12 rows at low incline (optional)"
   ]
 }

@@ -23,14 +23,14 @@ main{max-width:720px;margin:auto;padding:16px}h1{font-size:1.4rem;margin:20px 0 
 <div class="card"><h2>🥩 Keto plate (~20 g net carbs)</h2><div class="btns" id="keto"></div><div class="strip" id="strip"></div></div>
 <div class="card"><h2>⌚ WHOOP</h2><div class="w" id="whoop"></div><div id="wn" style="color:#8a909c;margin-top:6px"></div></div>
 <div class="card"><h2>🧪 WHOOP Advanced Labs</h2><div class="cd" id="cd"></div>
-<div>Wed Oct 21, 2026 · 9:20 AM ET<br>St Joseph, 2500 Niles Rd Ste 10B</div>
-<ul><li>Oct 20–21: pause Omega-D3 and Centrum</li><li>Skip Dose / IM8</li><li>Oct 21 AM: skip creatine</li><li>Keep aspirin, Citrucel, Qunol, MCT, magnesium, atorvastatin</li></ul></div>
+<div>Tue Oct 27, 2026 · 10:20 AM ET<br>St Joseph, 2500 Niles Rd Ste 10B</div>
+<ul><li>Oct 21–25: normal days (creatine and Omega-D3 resume)</li><li>Oct 26–27: hold Omega-D3, Centrum Silver, Dose / IM8</li><li>Creatine through Oct 26; skip Oct 27 AM</li><li>Keep aspirin, Citrucel 2 caplets, CoQ10 (Qunol), MCT, magnesium, statin</li></ul></div>
 <div class="card" id="notes" hidden></div>
 </main><script>
 const STACK={"Morning (~8 AM)":[["asp","Bayer aspirin 81 mg"],["cre","Thorne creatine ~5 g in water"],["cit","Citrucel, 2 caplets"]],
 "First meal (~1 PM)":[["omg","Nordic Omega-D3 Sport, 2 softgels"],["qun","Qunol Mega Ubiquinol 100 mg, 1 softgel"],["cen","Centrum Silver, 1 tablet"],["mct","MCT oil ½–1 tsp with food"]],
 "Bedtime":[["mag","Doctor's Best magnesium 200 mg (2 tablets)"],["ator","Atorvastatin 80 mg"]]};
-function skipped(id,d){if((d=="2026-10-20"||d=="2026-10-21")&&(id=="omg"||id=="cen"))return"Labs prep: skip";if(d=="2026-10-21"&&id=="cre")return"Labs morning: skip";}
+function skipped(id,d){if((d=="2026-10-26"||d=="2026-10-27")&&(id=="omg"||id=="cen"))return"Labs prep: skip";if(d=="2026-10-27"&&id=="cre")return"Labs morning: skip";}
 const etDate=(()=>{const n=new Date(),p=Object.fromEntries(new Intl.DateTimeFormat("en-CA",{timeZone:"America/New_York",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).formatToParts(n).map(x=>[x.type,x.value]));let d=new Date(Date.UTC(+p.year,+p.month-1,+p.day));if(+p.hour*60+ +p.minute<510)d.setUTCDate(d.getUTCDate()-1);return d.toISOString().slice(0,10);})(); // day rolls over at 8:30 AM ET
 const LS=k=>JSON.parse(localStorage.getItem(k)||"null"),SS=(k,v)=>localStorage.setItem(k,JSON.stringify(v));
 fetch("data.json?"+Date.now()).then(r=>r.json()).then(D=>{
@@ -46,7 +46,7 @@ const c=document.getElementById("cons");D.constraint?c.textContent=D.constraint:
 const sk="stack:"+day,st=LS(sk)||{};let h="";
 for(const[g,items]of Object.entries(STACK)){h+="<b>"+g+"</b>";for(const[id,n]of items){const s=skipped(id,day);
 h+=s?`<label class="skip">${n} — ${s}</label>`:`<label><input type=checkbox data-id=${id} ${st[id]?"checked":""}> ${n}</label>`;}}
-if(day=="2026-10-20"||day=="2026-10-21")h+='<div class="note">Labs prep: skip Dose / IM8.</div>';
+if(day=="2026-10-26"||day=="2026-10-27")h+='<div class="note">Labs prep: skip Dose / IM8.</div>';
 const se=document.getElementById("stack");se.innerHTML=h;se.onchange=e=>{st[e.target.dataset.id]=e.target.checked;SS(sk,st);score()};
 const kl=Object.assign({},D.keto_seed||{},LS("keto")||{});
 function rk(){const opts=[["on","On plan"],["off","Went off"],["fast","Skipped / fasting"]];
@@ -89,7 +89,7 @@ function score(){
 }
 score();
 });
-function tick(){const t=new Date("2026-10-21T09:20:00-04:00")-new Date();const e=document.getElementById("cd");
+function tick(){const t=new Date("2026-10-27T10:20:00-04:00")-new Date();const e=document.getElementById("cd");
 if(t<=0){e.textContent="Labs day — done or in progress";return}const d=Math.floor(t/864e5),hh=Math.floor(t%864e5/36e5),m=Math.floor(t%36e5/6e4);e.textContent=`${d}d ${hh}h ${m}m`;}
 tick();setInterval(tick,30000);
 </script></body></html>

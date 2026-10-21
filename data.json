@@ -3,9 +3,9 @@
   "challenge": "Back to a normal day after Tuesday's easy one. New Buffalo is dry and calm, about 61–64°F from noon to 5 PM. Do a moderate Total Gym upper session plus pushups, then a brisk walk; keep everything a couple of reps short of failure.",
   "constraint": "Labs are Tue Oct 27, 10:20 AM. Train normally through the weekend, but keep it moderate (nothing to failure) Oct 25–26.",
   "whoop": {
-    "recovery": null,
-    "sleep": null,
-    "strain": null
+    "recovery": 96.0,
+    "sleep": 86.0,
+    "strain": 4.1
   },
   "keto_seed": {
     "2026-10-09": "off",

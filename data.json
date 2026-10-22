@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-21",
-  "challenge": "Back to a normal day after Tuesday's easy one. New Buffalo is dry and calm, about 61–64°F from noon to 5 PM. Do a moderate Total Gym upper session plus pushups, then a brisk walk; keep everything a couple of reps short of failure.",
+  "date": "2026-10-22",
+  "challenge": "Legs day after Wednesday's upper session. New Buffalo is sunny and dry, about 63–64°F from noon to 4 PM with light wind. Do a moderate Total Gym leg session, an easy run-walk, and a little core; keep it a couple of reps short of failure.",
   "constraint": "Labs are Tue Oct 27, 10:20 AM. Train normally through the weekend, but keep it moderate (nothing to failure) Oct 25–26.",
   "whoop": {
-    "recovery": 96.0,
-    "sleep": 86.0,
-    "strain": 4.1
+    "recovery": null,
+    "sleep": null,
+    "strain": null
   },
   "keto_seed": {
     "2026-10-09": "off",
@@ -16,10 +16,10 @@
   },
   "notes": "",
   "items": [
-    "Total Gym upper: 3 x 12 rows + 3 x 10 chest press, moderate incline",
-    "Pushups: 3 x 12, stop 2 reps short of failure",
-    "Brisk 30–40 min walk, early afternoon (~62°F, light wind)",
-    "10 min mobility (hips, hamstrings, shoulders)",
-    "Easy 20–30 min kayak paddle (optional)"
+    "Total Gym legs: 3 x 12 squats + 3 x 12 single-leg calf raises, moderate incline",
+    "Easy 25–30 min run-walk (alternate 3 min jog / 2 min walk), early afternoon (~63°F, light wind)",
+    "Core: 3 x 30 sec plank + 3 x 12 dead bugs",
+    "10 min mobility (hips, hamstrings, calves)",
+    "Pushups: 2 x 10, easy (optional)"
   ]
 }

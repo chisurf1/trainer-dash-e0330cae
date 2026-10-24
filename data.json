@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-23",
-  "challenge": "Sunny, dry Friday in New Buffalo, about 62–66°F from noon to 5 PM with almost no wind. After legs Thursday, make it a pushups-plus-active-recovery day: a long brisk walk, pushups, core and mobility, nothing to failure.",
-  "constraint": "Labs are Tue Oct 27, 10:20 AM. Train normally through the weekend, but keep it moderate (nothing to failure) Oct 25–26.",
+  "date": "2026-10-24",
+  "challenge": "Mild, dry Saturday in New Buffalo, mid-60s from 1 to 5 PM with the wind dying off. Two days after legs, make it a moderate Total Gym upper session plus an afternoon walk, nothing to failure with labs Tuesday.",
+  "constraint": "Labs are Tue Oct 27, 10:20 AM. Train normally, but keep it moderate (nothing to failure) Oct 25–26.",
   "whoop": {
-    "recovery": 39.0,
-    "sleep": 86.0,
-    "strain": 0.1
+    "recovery": null,
+    "sleep": null,
+    "strain": null
   },
   "keto_seed": {
     "2026-10-09": "off",
@@ -16,10 +16,10 @@
   },
   "notes": "",
   "items": [
-    "Brisk 40–45 min walk (beach or trail), early afternoon (~65°F, calm)",
-    "Pushups: 4 x 12, controlled tempo, stop 2 reps short of failure",
-    "Core: 3 x 30 sec side plank each side + 3 x 12 bird dogs",
+    "Total Gym upper: 3 x 12 rows, 3 x 10 chest press, 3 x 12 biceps curls, 2 x 12 triceps, stop 2 reps short of failure",
+    "Pushups: 3 x 10, controlled tempo",
+    "Brisk 45 min walk (beach or trail), mid-afternoon (~66–68°F, light wind)",
     "10 min mobility (hips, upper back, shoulders)",
-    "30 min calm-water kayak if the lake is flat; dress for cold water (optional)"
+    "30 min easy kayak if the lake is calm after 3 PM; dress for cold water (optional)"
   ]
 }

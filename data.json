@@ -3,9 +3,9 @@
   "challenge": "Mild, dry Saturday in New Buffalo, mid-60s from 1 to 5 PM with the wind dying off. Two days after legs, make it a moderate Total Gym upper session plus an afternoon walk, nothing to failure with labs Tuesday.",
   "constraint": "Labs are Tue Oct 27, 10:20 AM. Train normally, but keep it moderate (nothing to failure) Oct 25–26.",
   "whoop": {
-    "recovery": null,
-    "sleep": null,
-    "strain": null
+    "recovery": 37.0,
+    "sleep": 83.0,
+    "strain": 4.1
   },
   "keto_seed": {
     "2026-10-09": "off",

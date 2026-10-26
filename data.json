@@ -1,7 +1,7 @@
 {
-  "date": "2026-10-25",
-  "challenge": "Sunny, calm Sunday in New Buffalo, near 69°F by 3 PM with the wind dropping off. After yesterday's upper day and a 37% recovery, keep it an easy active-recovery day ahead of Tuesday's labs: a long walk, light core and mobility, nothing hard.",
-  "constraint": "Labs are Tue Oct 27, 10:20 AM. Keep training moderate (nothing to failure) Oct 25–26; no creatine the morning of Oct 27.",
+  "date": "2026-10-26",
+  "challenge": "Mild, cloudy Monday in New Buffalo, around 60°F by noon with light wind. It's labs eve, so keep it moderate: a controlled Total Gym full-body session with nothing to failure, plus an easy walk.",
+  "constraint": "Labs are Tue Oct 27, 10:20 AM. Keep training moderate (nothing to failure) today. Hold Omega-D3, Centrum Silver and IM8 today and tomorrow; no creatine tomorrow morning.",
   "whoop": {
     "recovery": null,
     "sleep": null,
@@ -16,10 +16,10 @@
   },
   "notes": "",
   "items": [
-    "Easy 60 min walk (beach or trail), early-to-mid afternoon (~65–69°F, light wind)",
-    "Light core: 3 x 30 sec plank, 2 x 12 dead bugs, 2 x 10 bird dogs",
-    "Pushups: 2 x 10, easy tempo",
-    "15 min mobility (hips, hamstrings, upper back, shoulders)",
-    "30 min easy kayak if the lake is calm after 3 PM; dress for cold water (optional)"
+    "Total Gym full-body, moderate: 3 x 12 squats, 3 x 10 rows, 3 x 10 chest press, 2 x 12 pull-ups (incline you can control), stop 2-3 reps short of failure",
+    "Pushups: 2 x 12, easy tempo",
+    "Easy 45 min walk, midday to early afternoon (~58–60°F, light wind)",
+    "10 min mobility (hips, hamstrings, upper back)",
+    "20 min easy kayak if the lake is calm, dress for cold water (optional)"
   ]
 }

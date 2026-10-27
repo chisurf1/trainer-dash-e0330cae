@@ -3,9 +3,9 @@
   "challenge": "Mild, cloudy Monday in New Buffalo, around 60°F by noon with light wind. It's labs eve, so keep it moderate: a controlled Total Gym full-body session with nothing to failure, plus an easy walk.",
   "constraint": "Labs are Tue Oct 27, 10:20 AM. Keep training moderate (nothing to failure) today. Hold Omega-D3, Centrum Silver and IM8 today and tomorrow; no creatine tomorrow morning.",
   "whoop": {
-    "recovery": null,
-    "sleep": null,
-    "strain": null
+    "recovery": 74.0,
+    "sleep": 89.0,
+    "strain": 5.0
   },
   "keto_seed": {
     "2026-10-09": "off",

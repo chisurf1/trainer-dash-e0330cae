@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-26",
-  "challenge": "Mild, cloudy Monday in New Buffalo, around 60°F by noon with light wind. It's labs eve, so keep it moderate: a controlled Total Gym full-body session with nothing to failure, plus an easy walk.",
-  "constraint": "Labs are Tue Oct 27, 10:20 AM. Keep training moderate (nothing to failure) today. Hold Omega-D3, Centrum Silver and IM8 today and tomorrow; no creatine tomorrow morning.",
+  "date": "2026-10-27",
+  "challenge": "Labs day in New Buffalo: cool morning (~50°F) warming to a sunny-ish, dry ~66°F afternoon with light wind. Nothing hard before the 10:20 AM draw; move after labs and keep it easy-to-moderate.",
+  "constraint": "Labs today, Tue Oct 27, 10:20 AM in St Joseph. No workout before the draw; skip creatine this morning and hold Omega-D3, Centrum Silver and IM8 until after labs.",
   "whoop": {
-    "recovery": 74.0,
-    "sleep": 89.0,
-    "strain": 5.0
+    "recovery": null,
+    "sleep": null,
+    "strain": null
   },
   "keto_seed": {
     "2026-10-09": "off",
@@ -16,10 +16,10 @@
   },
   "notes": "",
   "items": [
-    "Total Gym full-body, moderate: 3 x 12 squats, 3 x 10 rows, 3 x 10 chest press, 2 x 12 pull-ups (incline you can control), stop 2-3 reps short of failure",
-    "Pushups: 2 x 12, easy tempo",
-    "Easy 45 min walk, midday to early afternoon (~58–60°F, light wind)",
-    "10 min mobility (hips, hamstrings, upper back)",
-    "20 min easy kayak if the lake is calm, dress for cold water (optional)"
+    "No training before labs; easy 10 min stretch only",
+    "Easy 50 min walk after labs, early-to-mid afternoon (~63–66°F, light wind)",
+    "Pushups: 3 x 12, easy tempo",
+    "Total Gym upper, moderate: 3 x 10 rows, 3 x 10 chest press, 2 x 10 pull-ups, nothing to failure",
+    "20 min easy kayak late afternoon if the lake is calm, dress for cold water (optional)"
   ]
 }

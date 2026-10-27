@@ -3,9 +3,9 @@
   "challenge": "Labs day in New Buffalo: cool morning (~50°F) warming to a sunny-ish, dry ~66°F afternoon with light wind. Nothing hard before the 10:20 AM draw; move after labs and keep it easy-to-moderate.",
   "constraint": "Labs today, Tue Oct 27, 10:20 AM in St Joseph. No workout before the draw; skip creatine this morning and hold Omega-D3, Centrum Silver and IM8 until after labs.",
   "whoop": {
-    "recovery": null,
-    "sleep": null,
-    "strain": null
+    "recovery": 78.0,
+    "sleep": 79.0,
+    "strain": 0.0
   },
   "keto_seed": {
     "2026-10-09": "off",

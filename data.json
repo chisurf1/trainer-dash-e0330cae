@@ -3,9 +3,9 @@
   "challenge": "Dry, sunny-ish day: cool ~51°F morning warming to ~73°F by mid-afternoon, light wind. Legs and a long walk today after yesterday's upper day.",
   "constraint": "",
   "whoop": {
-    "recovery": null,
-    "sleep": null,
-    "strain": null
+    "recovery": 44.0,
+    "sleep": 75.0,
+    "strain": 0.3
   },
   "keto_seed": {
     "2026-10-09": "off",

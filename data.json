@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-28",
-  "challenge": "Dry, sunny-ish day: cool ~51°F morning warming to ~73°F by mid-afternoon, light wind. Legs and a long walk today after yesterday's upper day.",
+  "date": "2026-10-29",
+  "challenge": "Mild, overcast day (~55°F early, ~69°F around noon, breeze ~13 mph, low rain chance). Easy cardio and core after two strength days.",
   "constraint": "",
   "whoop": {
-    "recovery": 44.0,
-    "sleep": 75.0,
-    "strain": 0.3
+    "recovery": null,
+    "sleep": null,
+    "strain": null
   },
   "keto_seed": {
     "2026-10-09": "off",
@@ -16,10 +16,10 @@
   },
   "notes": "",
   "items": [
-    "Easy 10 min mobility warm-up (hips, ankles, hamstrings)",
-    "Total Gym legs, moderate: 3 x 12 squats, 3 x 10 single-leg squats per side, 2 x 15 calf raises, nothing to failure",
-    "Pushups: 3 x 12, easy tempo",
-    "Brisk 45–60 min walk early afternoon (~67–72°F)",
-    "20–30 min easy kayak late afternoon if the lake is calm, dress for cold water (optional)"
+    "Easy 10 min mobility warm-up (hips, thoracic, shoulders)",
+    "Easy 30–40 min run/walk intervals midday (~68°F), conversational pace",
+    "Pushups: 3 x 10, easy tempo",
+    "Total Gym core: 2 x 12 crunches + 2 x 10 pikes, nothing to failure",
+    "20–30 min easy kayak around 6 PM when the wind drops, dress for cold water (optional)"
   ]
 }

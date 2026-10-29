@@ -21,12 +21,12 @@ main{max-width:720px;margin:auto;padding:16px}h1{font-size:1.4rem;margin:20px 0 
 <div class="bd" id="sb"></div><div class="strip" id="sstrip"></div></div>
 <div class="card"><h2>🏃 Today's challenge</h2><div id="ch"></div><div class="note" id="cons"></div><div id="items"></div><div class="strip" id="wstrip"></div></div>
 <div class="card"><h2>💊 Stack</h2><div id="stack"></div><a href="https://docs.google.com/document/d/1XhboshjdONUazegmiR3m3Ksoxgf-T5Oj0ymYBpSIoL8/edit" target="_blank">Health's stack doc ↗</a></div>
-<div class="card"><h2>🥩 Keto plate (~20 g net carbs)</h2><div class="btns" id="keto"></div><div class="strip" id="strip"></div></div>
+<div class="card"><h2>🥗 Meal log / low-carb</h2><div class="btns" id="keto"></div><div class="strip" id="strip"></div></div>
 <div class="card"><h2>💧 Water <span id="wc" style="color:var(--m);font-size:.85rem"></span></h2><div class="drops" id="drops"></div></div>
 <div class="card"><h2>⌚ WHOOP</h2><div class="w" id="whoop"></div><div id="wn" style="color:#8a909c;margin-top:6px"></div></div>
 <div class="card" id="notes" hidden></div>
 </main><script>
-const STACK={"Morning (~8 AM)":[["asp","Bayer aspirin 81 mg"],["cre","Thorne creatine ~5 g in water"],["cit","Citrucel, 2 caplets"]],
+const STACK={"Morning (~8 AM)":[["asp","Bayer aspirin 81 mg"],["cre","Thorne creatine 10 g in water"],["cit","Citrucel, 2 caplets"]],
 "First meal (~1 PM)":[["omg","Nordic Omega-D3 Sport, 2 softgels"],["qun","Qunol Mega Ubiquinol 100 mg, 1 softgel"],["cen","Centrum Silver, 1 tablet"],["mct","MCT oil ½–1 tsp with food"]],
 "Bedtime":[["mag","Doctor's Best magnesium 200 mg (2 tablets)"],["ator","Atorvastatin 80 mg"]]};
 function skipped(id,d){return undefined;}
@@ -83,7 +83,7 @@ function score(){
   const tot=w+stPts+k+wa+wh;
   document.getElementById("sc").textContent=tot;
   document.getElementById("sb").textContent=
-    `Workout ${w}/35 · Stack ${stPts}/25 · Keto ${k}/20 · Water ${wa}/10 · WHOOP ${wh}/10`;
+    `Workout ${w}/35 · Stack ${stPts}/25 · Meals ${k}/20 · Water ${wa}/10 · WHOOP ${wh}/10`;
   const SH=LS("scorehist")||{};SH[day]=tot;SS("scorehist",SH);
   let s="";for(let i=6;i>=0;i--){const dt=new Date(day+"T12:00");dt.setDate(dt.getDate()-i);const dk=dt.toLocaleDateString("en-CA");
     const v=SH[dk];let cls="";if(v!=null){cls=v>=70?"hi":v>=40?"md":"lo";}

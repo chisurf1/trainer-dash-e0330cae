@@ -27,7 +27,7 @@ main{max-width:720px;margin:auto;padding:16px}h1{font-size:1.4rem;margin:20px 0 
 <div class="card" id="notes" hidden></div>
 </main><script>
 const STACK={"Morning (~8 AM)":[["asp","Bayer aspirin 81 mg"],["cre","Thorne creatine 10 g in water"],["cit","Citrucel, 2 caplets"]],
-"First meal (~1 PM)":[["omg","Nordic Omega-D3 Sport, 2 softgels"],["qun","Qunol Mega Ubiquinol 100 mg, 1 softgel"],["cen","Centrum Silver, 1 tablet"],["mct","MCT oil ½–1 tsp with food"]],
+"First meal (~1 PM)":[["omg","Nordic Omega-D3 Sport, 2 softgels"],["qun","Qunol Mega Ubiquinol 100 mg, 1 softgel"],["cen","Centrum Silver, 1 tablet"],["evoo","Extra-virgin olive oil, 1–2 tbsp"]],
 "Bedtime":[["mag","Doctor's Best magnesium 200 mg (2 tablets)"],["ator","Atorvastatin 80 mg"]]};
 function skipped(id,d){return undefined;}
 const etDate=(()=>{const n=new Date(),p=Object.fromEntries(new Intl.DateTimeFormat("en-CA",{timeZone:"America/New_York",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).formatToParts(n).map(x=>[x.type,x.value]));let d=new Date(Date.UTC(+p.year,+p.month-1,+p.day));if(+p.hour*60+ +p.minute<510)d.setUTCDate(d.getUTCDate()-1);return d.toISOString().slice(0,10);})(); // day rolls over at 8:30 AM ET

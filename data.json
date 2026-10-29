@@ -3,9 +3,9 @@
   "challenge": "Mild, overcast day (~55°F early, ~69°F around noon, breeze ~13 mph, low rain chance). Easy cardio and core after two strength days.",
   "constraint": "",
   "whoop": {
-    "recovery": null,
-    "sleep": null,
-    "strain": null
+    "recovery": 77.0,
+    "sleep": 76.0,
+    "strain": 8.7
   },
   "keto_seed": {
     "2026-10-09": "off",

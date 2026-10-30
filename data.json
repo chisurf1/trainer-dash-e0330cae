@@ -1,18 +1,21 @@
 {
-  "date": "2026-10-29",
-  "challenge": "Mild, overcast day (~55°F early, ~69°F around noon, breeze ~13 mph, low rain chance). Easy cardio and core after two strength days.",
+  "date": "2026-10-30",
+  "challenge": "Cool, calm, dry day in New Buffalo (~46°F mid-morning, ~58°F early afternoon, light wind). Recovery 57% after a short night, so a moderate upper day with your first light dumbbell block; keep it smooth, nothing to failure.",
   "constraint": "",
   "whoop": {
-    "recovery": 77.0,
-    "sleep": 76.0,
-    "strain": 8.7
+    "recovery": 57.0,
+    "sleep": 74.0,
+    "strain": 0.2
   },
   "notes": "",
   "items": [
-    "Easy 10 min mobility warm-up (hips, thoracic, shoulders)",
-    "Easy 30–40 min run/walk intervals midday (~68°F), conversational pace",
+    "Easy 10 min mobility warm-up (shoulders, thoracic, hips)",
+    "Total Gym upper: 2 x 12 rows + 2 x 10 chest press, smooth tempo",
     "Pushups: 3 x 10, easy tempo",
-    "Total Gym core: 2 x 12 crunches + 2 x 10 pikes, nothing to failure",
-    "20–30 min easy kayak around 6 PM when the wind drops, dress for cold water (optional)"
+    "DB biceps curl 2x12 @ 8 lb",
+    "DB overhead press 2x10 @ 8 lb",
+    "DB lateral raise 2x12 @ 5 lb",
+    "DB triceps extension 2x12 @ 8 lb",
+    "Easy 30 min walk early afternoon (~58°F) (optional)"
   ]
 }

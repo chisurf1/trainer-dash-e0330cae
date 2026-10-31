@@ -1,21 +1,20 @@
 {
-  "date": "2026-10-30",
-  "challenge": "Cool, calm, dry day in New Buffalo (~46°F mid-morning, ~58°F early afternoon, light wind). Recovery 57% after a short night, so a moderate upper day with your first light dumbbell block; keep it smooth, nothing to failure.",
+  "date": "2026-10-31",
+  "challenge": "Mild, mostly dry Saturday in New Buffalo (~51°F mid-morning, ~59°F mid-afternoon, light breeze). WHOOP is signed out so recovery is unknown; after yesterday's upper day, keep it a moderate lower-body and walk day with an easy dumbbell block.",
   "constraint": "",
   "whoop": {
-    "recovery": 57.0,
-    "sleep": 74.0,
-    "strain": 0.2
+    "recovery": null,
+    "sleep": null,
+    "strain": null
   },
   "notes": "",
   "items": [
-    "Easy 10 min mobility warm-up (shoulders, thoracic, hips)",
-    "Total Gym upper: 2 x 12 rows + 2 x 10 chest press, smooth tempo",
-    "Pushups: 3 x 10, easy tempo",
-    "DB biceps curl 2x12 @ 8 lb",
-    "DB overhead press 2x10 @ 8 lb",
-    "DB lateral raise 2x12 @ 5 lb",
-    "DB triceps extension 2x12 @ 8 lb",
-    "Easy 30 min walk early afternoon (~58°F) (optional)"
+    "Easy 5 min mobility warm-up (hips, ankles, hamstrings)",
+    "Brisk 40 min walk, mid-afternoon (~59°F)",
+    "DB goblet squat 2x12 @ 12 lb",
+    "DB Romanian deadlift 2x12 @ 12 lb",
+    "DB reverse lunge 2x10 each leg @ 12 lb",
+    "Total Gym core: 2 x 12 crunch pulls, smooth tempo",
+    "Easy 10 min stretch after the walk (optional)"
   ]
 }

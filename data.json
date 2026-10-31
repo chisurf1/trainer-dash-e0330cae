@@ -3,9 +3,9 @@
   "challenge": "Mild, mostly dry Saturday in New Buffalo (~51°F mid-morning, ~59°F mid-afternoon, light breeze). WHOOP is signed out so recovery is unknown; after yesterday's upper day, keep it a moderate lower-body and walk day with an easy dumbbell block.",
   "constraint": "",
   "whoop": {
-    "recovery": null,
-    "sleep": null,
-    "strain": null
+    "recovery": 51.0,
+    "sleep": 36.0,
+    "strain": 0.8
   },
   "notes": "",
   "items": [

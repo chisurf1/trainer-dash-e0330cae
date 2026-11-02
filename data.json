@@ -3,9 +3,9 @@
   "challenge": "Mild, dry Monday in New Buffalo (~53°F morning to ~60°F afternoon, breezy up to 14 mph). Yesterday was upper body, so today is an easy lower-body dumbbell block plus a walk with a few light jog intervals. Keep it moderate until WHOOP recovery is confirmed.",
   "constraint": "",
   "whoop": {
-    "recovery": null,
-    "sleep": null,
-    "strain": null
+    "recovery": 59.0,
+    "sleep": 93.0,
+    "strain": 0.2
   },
   "notes": "",
   "items": [

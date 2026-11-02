@@ -1,22 +1,21 @@
 {
-  "date": "2026-11-01",
-  "challenge": "Mild, dry Sunday in New Buffalo (~53°F mid-morning, ~62°F early afternoon, light breeze). WHOOP is signed out so recovery is unknown; after yesterday's lower-body day, keep it a moderate upper-body Total Gym day with an easy dumbbell block and a relaxed walk.",
+  "date": "2026-11-02",
+  "challenge": "Mild, dry Monday in New Buffalo (~53°F morning to ~60°F afternoon, breezy up to 14 mph). Yesterday was upper body, so today is an easy lower-body dumbbell block plus a walk with a few light jog intervals. Keep it moderate until WHOOP recovery is confirmed.",
   "constraint": "",
   "whoop": {
-    "recovery": 51.0,
-    "sleep": 83.0,
-    "strain": 0.2
+    "recovery": null,
+    "sleep": null,
+    "strain": null
   },
   "notes": "",
   "items": [
-    "Easy 5 min warm-up (arm circles, band pull-aparts or light shoulder rolls)",
-    "Total Gym rows 3x12, moderate incline",
-    "Pushups 3x10 (knees or incline for the last set if needed)",
-    "DB curl 2x12 @ 10 lb",
-    "DB overhead press 2x10 @ 10 lb",
-    "DB lateral raise 2x12 @ 5 lb",
-    "DB triceps extension 2x12 @ 10 lb",
-    "Easy 30 min walk, early afternoon (~61°F)",
-    "Total Gym core: 2 x 12 crunch pulls (optional)"
+    "Easy 5 min warm-up (leg swings, bodyweight squats, hip circles)",
+    "DB goblet squat 2x12 @ 12 lb",
+    "DB Romanian deadlift 2x12 @ 15 lb",
+    "DB reverse lunge 2x10 each leg @ 12 lb",
+    "DB bent-over row 2x12 @ 15 lb",
+    "35 min walk, early afternoon (~60°F), with 4 x 1 min easy jog",
+    "Total Gym core: 2 x 12 crunch pulls (optional)",
+    "Pushups 2x10 (optional)"
   ]
 }

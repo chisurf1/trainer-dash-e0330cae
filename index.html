@@ -91,7 +91,7 @@ function score(){
   // WHOOP 10 — recovery present for today's data.json
   const wh=(D.date===day&&W.recovery!=null)?10:0;
   stPts=Math.round(30*stPts/(10*Object.keys(STACK).length));
-  const wa=Math.round(15*wn/8);
+  const wa=Math.round((DS[0]?5:0)+10*Object.entries(DS).filter(([k,v])=>v&&+k>0).length/7);
   const tot=w+stPts+wa+wh;
   document.getElementById("sc").textContent=tot;
   document.getElementById("sb").textContent=

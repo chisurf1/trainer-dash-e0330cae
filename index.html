@@ -32,7 +32,7 @@ function skipped(id,d){return undefined;}
 const etDate=(()=>{const n=new Date(),p=Object.fromEntries(new Intl.DateTimeFormat("en-CA",{timeZone:"America/New_York",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).formatToParts(n).map(x=>[x.type,x.value]));let d=new Date(Date.UTC(+p.year,+p.month-1,+p.day));if(+p.hour*60+ +p.minute<510)d.setUTCDate(d.getUTCDate()-1);return d.toISOString().slice(0,10);})(); // day rolls over at 8:30 AM ET
 const LS=k=>JSON.parse(localStorage.getItem(k)||"null"),SS=(k,v)=>{localStorage.setItem(k,JSON.stringify(v));if(SYK(k))push();};
 // --- online sync (textdb.dev; the only key is the private sync id from #k=) ---
-const SYK=k=>/^(work:|stack:)/.test(k)||["water","workhist","scorehist"].includes(k);
+const SYK=k=>/^(work:|stack:|drops:)/.test(k)||["water","workhist","scorehist"].includes(k);
 (()=>{const m=location.hash.match(/k=([A-Za-z0-9_-]{24,})/);if(m){localStorage.setItem("synckey",m[1]);history.replaceState(null,"",location.pathname+location.search);}})();
 const SKEY=localStorage.getItem("synckey"),SURL=SKEY?"https://textdb.dev/api/data/"+SKEY:null;
 function syncMsg(t,c){let e=document.getElementById("syncst");if(!e){e=document.createElement("div");e.id="syncst";e.style.cssText="position:fixed;right:8px;bottom:6px;font-size:11px;opacity:.75;z-index:9";document.body.appendChild(e);}e.textContent=t;e.style.color=c||"#8a909c";}
@@ -73,9 +73,9 @@ document.getElementById("whoop").innerHTML=
 if(W.recovery==null&&W.sleep==null&&W.strain==null)document.getElementById("wn").textContent="No WHOOP data today";
 if(D.notes){const n=document.getElementById("notes");n.hidden=false;n.textContent=D.notes;}
 
-const wak="water",WA=LS(wak)||{};let wn=WA[day]||0;const DROP='<svg viewBox="0 0 24 32"><path d="M12 2C12 2 3 14 3 20.5a9 9 0 0 0 18 0C21 14 12 2 12 2z"/></svg>';
-function rw(){document.getElementById("drops").innerHTML=Array.from({length:8},(_,i)=>`<button aria-label="${i?"Glass "+(i+1):"Lemon water"}" data-i="${i}" class="${i<wn?"f":""}">${DROP}</button>`).join("");document.getElementById("wc").textContent=wn+"/8";}
-document.getElementById("drops").onclick=e=>{const b=e.target.closest("button");if(!b)return;const i=+b.dataset.i;wn=i<wn?i:i+1;WA[day]=wn;SS(wak,WA);rw();score()};rw();
+const wak="water",WA=LS(wak)||{};let wn=WA[day]||0;const dk="drops:"+day,DS=LS(dk)||Object.fromEntries(Array.from({length:wn},(_,i)=>[i,true]));const DROP='<svg viewBox="0 0 24 32"><path d="M12 2C12 2 3 14 3 20.5a9 9 0 0 0 18 0C21 14 12 2 12 2z"/></svg>';
+function rw(){document.getElementById("drops").innerHTML=Array.from({length:8},(_,i)=>`<button aria-label="${i?"Glass "+(i+1):"Lemon water"}" data-i="${i}" class="${DS[i]?"f":""}">${DROP}</button>`).join("");document.getElementById("wc").textContent=wn+"/8";}
+document.getElementById("drops").onclick=e=>{const b=e.target.closest("button");if(!b)return;const i=+b.dataset.i;DS[i]=!DS[i];SS(dk,DS);wn=Object.values(DS).filter(Boolean).length;WA[day]=wn;SS(wak,WA);rw();score()};rw();
 function score(){
   // Workout 45
   const req=its.map((t,i)=>({t,i})).filter(x=>!/optional/i.test(x.t));

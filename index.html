@@ -30,8 +30,30 @@ const STACK={"Morning (~8 AM)":[["asp","Bayer aspirin 81 mg"],["cre","Thorne cre
 "Bedtime":[["mag","Doctor's Best magnesium 200 mg (2 tablets)"],["ator","Atorvastatin 80 mg"]]};
 function skipped(id,d){return undefined;}
 const etDate=(()=>{const n=new Date(),p=Object.fromEntries(new Intl.DateTimeFormat("en-CA",{timeZone:"America/New_York",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).formatToParts(n).map(x=>[x.type,x.value]));let d=new Date(Date.UTC(+p.year,+p.month-1,+p.day));if(+p.hour*60+ +p.minute<510)d.setUTCDate(d.getUTCDate()-1);return d.toISOString().slice(0,10);})(); // day rolls over at 8:30 AM ET
-const LS=k=>JSON.parse(localStorage.getItem(k)||"null"),SS=(k,v)=>localStorage.setItem(k,JSON.stringify(v));
-fetch("data.json?"+Date.now()).then(r=>r.json()).then(D=>{
+const LS=k=>JSON.parse(localStorage.getItem(k)||"null"),SS=(k,v)=>{localStorage.setItem(k,JSON.stringify(v));if(SYK(k))push();};
+// --- online sync (textdb.dev; the only key is the private sync id from #k=) ---
+const SYK=k=>/^(work:|stack:)/.test(k)||["water","workhist","scorehist"].includes(k);
+(()=>{const m=location.hash.match(/k=([A-Za-z0-9_-]{24,})/);if(m){localStorage.setItem("synckey",m[1]);history.replaceState(null,"",location.pathname+location.search);}})();
+const SKEY=localStorage.getItem("synckey"),SURL=SKEY?"https://textdb.dev/api/data/"+SKEY:null;
+function syncMsg(t,c){let e=document.getElementById("syncst");if(!e){e=document.createElement("div");e.id="syncst";e.style.cssText="position:fixed;right:8px;bottom:6px;font-size:11px;opacity:.75;z-index:9";document.body.appendChild(e);}e.textContent=t;e.style.color=c||"#8a909c";}
+function localState(){const o={};for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(SYK(k))o[k]=LS(k);}return o;}
+let pT=null,pTry=0;function push(){if(!SURL)return;clearTimeout(pT);pT=setTimeout(doPush,800);}
+function doPush(){fetch(SURL+"?"+Date.now()).then(r=>{if(!r.ok)throw 0;return r.text();}).then(t=>{let R={};try{R=t.trim()?JSON.parse(t):{};}catch(e){}
+ const L=localState(),o={};for(const k of new Set([...Object.keys(R),...Object.keys(L)])){if(!SYK(k))continue;const l=L[k],r=R[k];o[k]=(l&&r&&typeof l=="object"&&typeof r=="object")?Object.assign({},r,l):(l!=null?l:r);}
+ o._ts=Date.now();return fetch(SURL,{method:"POST",headers:{"Content-Type":"text/plain"},body:JSON.stringify(o)});}).then(r=>{if(!r.ok)throw 0;pTry=0;syncMsg("synced ✓");}).catch(()=>{syncMsg("offline, will retry","#c97a00");pTry++;pT=setTimeout(doPush,Math.min(60000,3000*pTry));});}
+addEventListener("online",()=>{if(pTry)doPush();});
+function pull(){if(!SURL){return Promise.resolve();}syncMsg("syncing…");
+ return Promise.race([fetch(SURL+"?"+Date.now()).then(r=>{if(!r.ok)throw 0;return r.text();}),new Promise((_,j)=>setTimeout(()=>j(0),5000))]).then(t=>{
+  let R={};try{R=t.trim()?JSON.parse(t):{};}catch(e){R={};}
+  const L=localState();let needPush=false;
+  for(const k of new Set([...Object.keys(L),...Object.keys(R)])){if(!SYK(k))continue;const l=L[k],r=R[k];let v;
+   if(r==null)v=l;else if(l==null)v=r;else if(typeof l=="object"&&typeof r=="object"){v=Object.assign({},l,r);}else v=r;
+   if(l!=null&&(r==null||(typeof l=="object"&&Object.keys(l).some(x=>!(x in (r||{}))))))needPush=true;
+   localStorage.setItem(k,JSON.stringify(v));}
+  if(needPush)doPush();else syncMsg("synced ✓");
+ }).catch(()=>{syncMsg("offline, will retry","#c97a00");pTry=1;pT=setTimeout(doPush,15000);});}
+if(!SKEY)setTimeout(()=>syncMsg("not synced (open your private link once)","#c97a00"),0);
+Promise.all([fetch("data.json?"+Date.now()).then(r=>r.json()),pull().catch(()=>{})]).then(([D])=>{
 const day=etDate;document.getElementById("hd").textContent="Douglas · "+new Date(day+"T12:00").toDateString();
 document.getElementById("ch").innerHTML=(D.date!=day?"<i>(Challenge from "+D.date+"; today's not posted yet)</i><br>":"")+D.challenge;
 const its=D.date==day?(D.items||[]):[],wk="work:"+day,ws=LS(wk)||{};

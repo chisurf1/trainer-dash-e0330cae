@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Print a day's synced taps. Usage: python3 read_taps.py [YYYY-MM-DD] [--json]"""
+"""Print a day's synced taps. Usage: python3 read_taps.py [YYYY-MM-DD] [--json] [--bp]"""
 import sys,json,urllib.request,datetime
 KEYF="/cursor/stores/store-c216b2f0-d5d7-421f-8b57-038751d79c25/trainer-dashboard/sync_key.txt"
 import os
@@ -9,6 +9,10 @@ day=args[0] if args else datetime.date.today().isoformat()
 req=urllib.request.Request(f"https://textdb.dev/api/data/{key}",headers={"User-Agent":"read_taps"})
 t=urllib.request.urlopen(req,timeout=20).read().decode().strip()
 S=json.loads(t) if t else {}
+if "--bp" in sys.argv:  # BP history only (private sync key "bp"); no score output
+  bp=sorted([dict(id=k,**v) for k,v in (S.get("bp") or {}).items() if isinstance(v,dict) and v.get("s")],key=lambda r:r["d"]+(r.get("t") or ""),reverse=True)
+  print(json.dumps(bp,indent=1)) if "--json" in sys.argv else [print(r["d"],r.get("t") or "",f"{r['s']}/{r['di']}") for r in bp] or print("No BP readings")
+  sys.exit(0)
 data=json.load(open(__file__.rsplit("/",1)[0]+"/data.json"))
 items=data.get("items",[]) if data.get("date")==day else []
 work=S.get("work:"+day) or {}; stack=S.get("stack:"+day) or {}; water=(S.get("water") or {}).get(day,0)

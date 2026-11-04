@@ -22,6 +22,14 @@ main{max-width:720px;margin:auto;padding:16px}h1{font-size:1.4rem;margin:20px 0 
 <div class="card"><h2>🏃 Today's challenge</h2><div id="ch"></div><div class="note" id="cons"></div><div id="items"></div><div class="strip" id="wstrip"></div></div>
 <div class="card"><h2>💊 Stack</h2><div id="stack"></div><a href="https://docs.google.com/document/d/1KiOCAaDm1LiXoAi4BNWOxwb5r6AY5wpJIG0sZEV5Rd0/edit" target="_blank">Current stack + Frankel Q list ↗</a></div>
 <div class="card"><h2>💧 Water <span id="wc" style="color:var(--m);font-size:.85rem"></span></h2><div class="drops" id="drops"></div></div>
+<div class="card"><h2>🩺 Blood pressure <span id="bpdue" style="font-size:.85rem"></span></h2><div id="bplast" style="color:var(--m);font-size:.9rem"></div>
+<form id="bpf" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;align-items:end">
+<label style="padding:0">Sys<br><input id="bps" type=number inputmode=numeric min=70 max=250 required style="width:70px"></label>
+<label style="padding:0">Dia<br><input id="bpd" type=number inputmode=numeric min=40 max=150 required style="width:70px"></label>
+<label style="padding:0">Date<br><input id="bpdt" type=date required></label>
+<label style="padding:0">Time (opt.)<br><input id="bptm" type=time></label>
+<span class="btns"><button type=submit>Save</button></span></form><div id="bperr" style="color:var(--r);font-size:.85rem"></div>
+<ul id="bph" style="list-style:none;padding:0;margin-top:10px"></ul></div>
 <div class="card"><h2>⌚ WHOOP</h2><div class="w" id="whoop"></div><div id="wn" style="color:#8a909c;margin-top:6px"></div></div>
 <div class="card" id="notes" hidden></div>
 </main><script>
@@ -32,7 +40,7 @@ function skipped(id,d){return undefined;}
 const etDate=(()=>{const n=new Date(),p=Object.fromEntries(new Intl.DateTimeFormat("en-CA",{timeZone:"America/New_York",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).formatToParts(n).map(x=>[x.type,x.value]));let d=new Date(Date.UTC(+p.year,+p.month-1,+p.day));if(+p.hour*60+ +p.minute<510)d.setUTCDate(d.getUTCDate()-1);return d.toISOString().slice(0,10);})(); // day rolls over at 8:30 AM ET
 const LS=k=>JSON.parse(localStorage.getItem(k)||"null"),SS=(k,v)=>{localStorage.setItem(k,JSON.stringify(v));if(SYK(k))push();};
 // --- online sync (textdb.dev; the only key is the private sync id from #k=) ---
-const SYK=k=>/^(work:|stack:|drops:)/.test(k)||["water","workhist","scorehist"].includes(k);
+const SYK=k=>/^(work:|stack:|drops:)/.test(k)||["water","workhist","scorehist","bp"].includes(k);
 (()=>{const m=location.hash.match(/k=([A-Za-z0-9_-]{24,})/);if(m){localStorage.setItem("synckey",m[1]);history.replaceState(null,"",location.pathname+location.search);}})();
 const SKEY=localStorage.getItem("synckey"),SURL=SKEY?"https://textdb.dev/api/data/"+SKEY:null;
 function syncMsg(t,c){let e=document.getElementById("syncst");if(!e){e=document.createElement("div");e.id="syncst";e.style.cssText="position:fixed;right:8px;bottom:6px;font-size:11px;opacity:.75;z-index:9";document.body.appendChild(e);}e.textContent=t;e.style.color=c||"#8a909c";}
@@ -103,5 +111,21 @@ function score(){
   document.getElementById("sstrip").innerHTML=s;
 }
 score();
+// --- Blood pressure (private: synced key "bp" only; never in repo/data.json) ---
+(function(){const today=new Date().toLocaleDateString("en-CA",{timeZone:"America/New_York"});
+const $=i=>document.getElementById(i);$("bpdt").value=today;
+const fmt=d=>new Date(d+"T12:00").toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric"});
+const list=()=>Object.entries(LS("bp")||{}).filter(([k,v])=>v&&v.s).map(([k,v])=>Object.assign({id:k},v)).sort((a,b)=>(b.d+(b.t||"")).localeCompare(a.d+(a.t||"")));
+function render(){const L=list(),last=L[0];let due=true,nx="";
+ if(last){const age=Math.round((new Date(today+"T12:00")-new Date(last.d+"T12:00"))/864e5);due=age>=3;const n=new Date(last.d+"T12:00");n.setDate(n.getDate()+3);nx=n.toLocaleDateString("en-CA");}
+ $("bpdue").innerHTML=due?'<span style="color:var(--r);font-weight:700">· Due today</span>':'<span style="color:var(--g)">· Next due '+fmt(nx)+'</span>';
+ $("bplast").textContent=last?`Last: ${last.s}/${last.di} on ${fmt(last.d)}${last.t?" "+last.t:""}`:"No readings yet";
+ $("bph").innerHTML=L.map(r=>`<li style="display:flex;justify-content:space-between;padding:5px 0;border-top:1px solid var(--c2)"><span>${fmt(r.d)} ${r.t||""}</span><b>${r.s}/${r.di}</b><button data-id="${r.id}" style="background:none;border:0;color:var(--m);cursor:pointer" aria-label="Delete">✕</button></li>`).join("");}
+$("bpf").onsubmit=e=>{e.preventDefault();const s=+$("bps").value,di=+$("bpd").value,d=$("bpdt").value,t=$("bptm").value;
+ if(!(s>=70&&s<=250&&di>=40&&di<=150)||di>=s||!d||d>today){$("bperr").textContent="Check values: sys 70–250, dia 40–150, sys > dia, date not in the future.";return;}
+ $("bperr").textContent="";const B=LS("bp")||{};B[Date.now().toString(36)]={s,di,d,t};SS("bp",B);$("bps").value=$("bpd").value=$("bptm").value="";$("bpdt").value=today;render();};
+$("bph").onclick=e=>{const b=e.target.closest("button[data-id]");if(!b)return;const B=LS("bp")||{},r=B[b.dataset.id];if(!r)return;
+ if(!confirm(`Delete ${r.s}/${r.di} from ${fmt(r.d)}?`))return;B[b.dataset.id]={x:1};SS("bp",B);render();};
+render();})();
 });
 </script></body></html>

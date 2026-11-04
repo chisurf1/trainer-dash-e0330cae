@@ -14,7 +14,7 @@ items=data.get("items",[]) if data.get("date")==day else []
 work=S.get("work:"+day) or {}; stack=S.get("stack:"+day) or {}; water=(S.get("water") or {}).get(day,0)
 DR=S.get("drops:"+day); lemon=bool(DR.get("0")) if DR else water>0; matcha=bool(DR.get("7")) if DR else water>=8; others=sum(1 for k,v in DR.items() if v and k not in ("0","7")) if DR else min(max(water-1,0),6)
 wpts_water=round((5 if lemon else 0)+(5 if matcha else 0)+5*others/6)
-BLOCKS={"Morning":["asp","cre","cit"],"First meal":["omg","qun","cen","evoo"],"Bedtime":["mag","ator"]}
+BLOCKS={"Morning":["asp","cre","cit"],"First meal":["omg","qun","cen","evoo","cit2"],"Bedtime":["mag","ator"]}
 checked=[items[int(i)] if int(i)<len(items) else f"item {i}" for i,v in sorted(work.items(),key=lambda x:int(x[0])) if v]
 req_items=[i for i,t in enumerate(items) if "optional" not in t.lower()]
 wpts=round(45*sum(1 for i in req_items if work.get(str(i)))/len(req_items)) if req_items else 0

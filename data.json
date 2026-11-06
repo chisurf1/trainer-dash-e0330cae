@@ -3,9 +3,9 @@
   "challenge": "Chilly rainy Friday in New Buffalo (~45–51°F, NW wind and showers likely). Yesterday was easy upper; today is an easy lower day: light dumbbell lower block indoors, then a short walk when the rain eases (covered path / indoor if wet).",
   "constraint": "",
   "whoop": {
-    "recovery": null,
-    "sleep": null,
-    "strain": null
+    "recovery": 55.0,
+    "sleep": 88.0,
+    "strain": 0.1
   },
   "notes": "",
   "items": [

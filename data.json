@@ -1,23 +1,20 @@
 {
-  "date": "2026-11-05",
-  "challenge": "Cool overcast Thursday in New Buffalo (~52–54°F, showers more likely late day). Yesterday was lower; recovery is yellow (53%), so today is an easy upper day: light Total Gym and pushups, a light dumbbell block, and a short walk before the rain.",
+  "date": "2026-11-06",
+  "challenge": "Chilly rainy Friday in New Buffalo (~45–51°F, NW wind and showers likely). Yesterday was easy upper; today is an easy lower day: light dumbbell lower block indoors, then a short walk when the rain eases (covered path / indoor if wet).",
   "constraint": "",
   "whoop": {
-    "recovery": 63.0,
-    "sleep": 84.0,
-    "strain": 4.2
+    "recovery": null,
+    "sleep": null,
+    "strain": null
   },
   "notes": "",
   "items": [
-    "Easy 5 min warm-up (arm circles, band pull-aparts or scap squeezes, light torso twists)",
-    "Total Gym seated row 2x12 (light–moderate resistance)",
-    "Total Gym chest press 2x10 (light–moderate resistance)",
-    "Pushups 2x8–10 (knees OK)",
-    "DB curl 2x12 @ 8–10 lb",
-    "DB overhead press 2x10 @ 8–10 lb",
-    "DB lateral raise 2x10 @ 5 lb",
-    "DB triceps extension 2x12 @ 8–10 lb",
-    "20–25 min easy walk before late-day showers (covered path / indoor if rain starts)",
-    "Easy core: 2x10 dead bugs (optional)"
+    "Easy 5 min warm-up (hip circles, bodyweight squats, light marches)",
+    "DB goblet squat 2x12 @ 12 lb",
+    "DB Romanian deadlift 2x12 @ 15 lb",
+    "DB reverse lunge 2x10/leg @ 12 lb",
+    "DB bent-over row 2x12 @ 15 lb",
+    "25–30 min easy walk when showers ease (covered path / indoor if rain)",
+    "Easy core: 2x10 glute bridges (optional)"
   ]
 }

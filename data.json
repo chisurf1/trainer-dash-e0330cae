@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-07",
-  "challenge": "Cool, dry, cloudy Saturday in New Buffalo (~45–49°F, breezy NW wind, no rain). Yesterday was easy lower, so today is an easy upper day: Total Gym and pushups, a light dumbbell upper block, then a longer easy walk while it's dry.",
+  "date": "2026-11-08",
+  "challenge": "Sunny, dry Sunday in New Buffalo (about 39°F early, warming to ~55–57°F this afternoon, breezy, no rain). Yesterday was upper, so today is an easy lower day: a light dumbbell leg block, then a longer walk in the best weather of the week.",
   "constraint": "",
   "whoop": {
     "recovery": null,
@@ -9,15 +9,13 @@
   },
   "notes": "",
   "items": [
-    "Easy 5 min warm-up (arm circles, band pull-aparts or light marches)",
-    "Total Gym row 2x12",
-    "Total Gym chest press 2x12",
-    "Pushups 2x10 (knees or incline if needed)",
-    "DB biceps curl 2x12 @ 8 lb",
-    "DB overhead press 2x10 @ 8 lb",
-    "DB lateral raise 2x12 @ 5 lb",
-    "DB triceps extension 2x12 @ 8 lb",
-    "30–35 min easy walk (dry all day, layer up for the wind)",
+    "Easy 5 min warm-up (leg swings, bodyweight squats, marches)",
+    "DB goblet squat 2x12 @ 12 lb",
+    "DB Romanian deadlift 2x12 @ 15 lb",
+    "DB reverse lunge 2x10 each leg @ 12 lb",
+    "DB bent-over row 2x12 @ 15 lb",
+    "40 min brisk walk this afternoon (sunny, mid-50s)",
+    "Add 4x1 min easy jog intervals inside the walk (optional)",
     "Easy core: 2x20 sec plank (optional)"
   ]
 }

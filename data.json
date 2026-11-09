@@ -3,9 +3,9 @@
   "challenge": "Sunny, dry Sunday in New Buffalo (about 39°F early, warming to ~55–57°F this afternoon, breezy, no rain). Yesterday was upper, so today is an easy lower day: a light dumbbell leg block, then a longer walk in the best weather of the week.",
   "constraint": "",
   "whoop": {
-    "recovery": null,
-    "sleep": null,
-    "strain": null
+    "recovery": 58.0,
+    "sleep": 89.0,
+    "strain": 4.3
   },
   "notes": "",
   "items": [

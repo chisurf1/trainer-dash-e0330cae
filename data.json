@@ -3,9 +3,9 @@
   "challenge": "Yellow recovery (61%): easy upper day plus a brisk walk. Dry and cloudy, upper 40s to mid 50s.",
   "constraint": "",
   "whoop": {
-    "recovery": 61.0,
-    "sleep": 91.0,
-    "strain": 0.1
+    "recovery": 65.0,
+    "sleep": 82.0,
+    "strain": 5.4
   },
   "notes": "",
   "items": [

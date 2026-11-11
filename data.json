@@ -3,9 +3,9 @@
   "challenge": "Easy upper day indoors plus a walk between showers. Drizzle likely, high near 59, breezy.",
   "constraint": "",
   "whoop": {
-    "recovery": null,
-    "sleep": null,
-    "strain": null
+    "recovery": 66.0,
+    "sleep": 95.0,
+    "strain": 0.5
   },
   "notes": "",
   "items": [

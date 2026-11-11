@@ -1,11 +1,11 @@
 {
   "date": "2026-11-10",
-  "challenge": "Easy lower day plus a long walk in the sun. WHOOP hasn't scored today yet. Sunny, high near 56, light wind.",
+  "challenge": "Easy lower day plus a long walk in the sun. Sunny, high near 56, light wind.",
   "constraint": "",
   "whoop": {
-    "recovery": null,
-    "sleep": null,
-    "strain": null
+    "recovery": 79.0,
+    "sleep": 89.0,
+    "strain": 4.5
   },
   "notes": "",
   "items": [

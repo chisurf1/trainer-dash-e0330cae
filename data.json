@@ -1,19 +1,21 @@
 {
-  "date": "2026-11-10",
-  "challenge": "Easy lower day plus a long walk in the sun. Sunny, high near 56, light wind.",
+  "date": "2026-11-11",
+  "challenge": "Easy upper day indoors plus a walk between showers. Drizzle likely, high near 59, breezy.",
   "constraint": "",
   "whoop": {
-    "recovery": 79.0,
-    "sleep": 89.0,
-    "strain": 4.5
+    "recovery": null,
+    "sleep": null,
+    "strain": null
   },
   "notes": "",
   "items": [
-    "DB goblet squat 2x12 @ 12 lb",
-    "DB Romanian deadlift 2x12 @ 15 lb",
-    "DB reverse lunge 2x10 each leg @ 12 lb",
-    "DB bent-over row 2x12 @ 15 lb",
-    "40–45 min walk (sunny, mid-50s)",
-    "Easy jog intervals during walk (optional)"
+    "Total Gym row 2x12",
+    "Total Gym chest press 2x12",
+    "Pushups 2x10",
+    "DB curl 2x12 @ 8 lb",
+    "DB overhead press 2x10 @ 8 lb",
+    "DB lateral raise 2x12 @ 5 lb",
+    "DB triceps extension 2x12 @ 8 lb",
+    "30–35 min walk (dry window, rain shell)"
   ]
 }

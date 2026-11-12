@@ -3,9 +3,9 @@
   "challenge": "Easy lower day: DB legs indoors, walk in the drier mid-afternoon window. Rain likely this morning, high near 50, windy.",
   "constraint": "",
   "whoop": {
-    "recovery": null,
-    "sleep": null,
-    "strain": null
+    "recovery": 62.0,
+    "sleep": 94.0,
+    "strain": 3.1
   },
   "notes": "",
   "items": [

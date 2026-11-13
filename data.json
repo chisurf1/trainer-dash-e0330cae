@@ -3,9 +3,9 @@
   "challenge": "Easy upper day: Total Gym row + chest press, pushups, light DB block, plus a 30–40 min walk in the brighter ~12–3 PM window (cloudy, ~40°F, breezy).",
   "constraint": "",
   "whoop": {
-    "recovery": null,
-    "sleep": null,
-    "strain": null
+    "recovery": 45.0,
+    "sleep": 95.0,
+    "strain": 0.2
   },
   "notes": "",
   "items": [

@@ -3,9 +3,9 @@
   "challenge": "Easy lower day: Total Gym squats + a light DB leg block, then a 40–45 min walk in the dry ~11 AM–3 PM window (mostly cloudy, mid-40s°F, breezy).",
   "constraint": "",
   "whoop": {
-    "recovery": null,
-    "sleep": null,
-    "strain": null
+    "recovery": 48.0,
+    "sleep": 99.0,
+    "strain": 4.1
   },
   "notes": "",
   "items": [

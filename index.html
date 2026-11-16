@@ -22,9 +22,6 @@ main{max-width:720px;margin:auto;padding:16px}h1{font-size:1.4rem;margin:20px 0 
 <div class="card"><h2>🏃 Today's challenge</h2><div id="ch"></div><div class="note" id="cons"></div><div id="items"></div><div class="strip" id="wstrip"></div></div>
 <div class="card"><h2>💊 Stack</h2><div id="stack"></div><a href="https://docs.google.com/document/d/1KiOCAaDm1LiXoAi4BNWOxwb5r6AY5wpJIG0sZEV5Rd0/edit" target="_blank">Current stack + Frankel Q list ↗</a></div>
 <div class="card"><h2>💧 Water <span id="wc" style="color:var(--m);font-size:.85rem"></span></h2><div class="drops" id="drops"></div></div>
-<div class="card"><h2>🩺 Blood pressure <span style="font-size:.75rem;font-weight:500;color:var(--m);text-transform:none;letter-spacing:0">From Apple Health</span></h2>
-<div id="bplast" style="color:var(--m);font-size:.9rem"></div>
-<ul id="bph" style="list-style:none;padding:0;margin-top:10px"></ul></div>
 <div class="card"><h2>⌚ WHOOP</h2><div class="w" id="whoop"></div><div id="wn" style="color:#8a909c;margin-top:6px"></div></div>
 <div class="card" id="notes" hidden></div>
 </main><script>
@@ -35,14 +32,15 @@ function skipped(id,d){return undefined;}
 const etDate=(()=>{const n=new Date(),p=Object.fromEntries(new Intl.DateTimeFormat("en-CA",{timeZone:"America/New_York",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).formatToParts(n).map(x=>[x.type,x.value]));let d=new Date(Date.UTC(+p.year,+p.month-1,+p.day));if(+p.hour*60+ +p.minute<510)d.setUTCDate(d.getUTCDate()-1);return d.toISOString().slice(0,10);})(); // day rolls over at 8:30 AM ET
 const LS=k=>JSON.parse(localStorage.getItem(k)||"null"),SS=(k,v)=>{localStorage.setItem(k,JSON.stringify(v));if(SYK(k))push();};
 // --- online sync (textdb.dev; the only key is the private sync id from #k=) ---
-const SYK=k=>/^(work:|stack:|drops:)/.test(k)||["water","workhist","scorehist","bp"].includes(k);
+const SYK=k=>/^(work:|stack:|drops:)/.test(k)||["water","workhist","scorehist"].includes(k);
 (()=>{const m=location.hash.match(/k=([A-Za-z0-9_-]{24,})/);if(m){localStorage.setItem("synckey",m[1]);history.replaceState(null,"",location.pathname+location.search);}})();
 const SKEY=localStorage.getItem("synckey"),SURL=SKEY?"https://textdb.dev/api/data/"+SKEY:null;
 function syncMsg(t,c){let e=document.getElementById("syncst");if(!e){e=document.createElement("div");e.id="syncst";e.style.cssText="position:fixed;right:8px;bottom:6px;font-size:11px;opacity:.75;z-index:9";document.body.appendChild(e);}e.textContent=t;e.style.color=c||"#8a909c";}
 function localState(){const o={};for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(SYK(k))o[k]=LS(k);}return o;}
 let pT=null,pTry=0;function push(){if(!SURL)return;clearTimeout(pT);pT=setTimeout(doPush,800);}
 function doPush(){fetch(SURL+"?"+Date.now()).then(r=>{if(!r.ok)throw 0;return r.text();}).then(t=>{let R={};try{R=t.trim()?JSON.parse(t):{};}catch(e){}
- const L=localState(),o={};for(const k of new Set([...Object.keys(R),...Object.keys(L)])){if(!SYK(k))continue;const l=L[k],r=R[k];o[k]=(l&&r&&typeof l=="object"&&typeof r=="object")?Object.assign({},r,l):(l!=null?l:r);}
+ const L=localState(),o={};for(const k of Object.keys(R)){if(!SYK(k)&&k!=="_ts")o[k]=R[k];}
+ for(const k of new Set([...Object.keys(R),...Object.keys(L)])){if(!SYK(k))continue;const l=L[k],r=R[k];o[k]=(l&&r&&typeof l=="object"&&typeof r=="object")?Object.assign({},r,l):(l!=null?l:r);}
  o._ts=Date.now();return fetch(SURL,{method:"POST",headers:{"Content-Type":"text/plain"},body:JSON.stringify(o)});}).then(r=>{if(!r.ok)throw 0;pTry=0;syncMsg("synced ✓");}).catch(()=>{syncMsg("offline, will retry","#c97a00");pTry++;pT=setTimeout(doPush,Math.min(60000,3000*pTry));});}
 addEventListener("online",()=>{if(pTry)doPush();});
 function pull(){if(!SURL){return Promise.resolve();}syncMsg("syncing…");
@@ -106,13 +104,5 @@ function score(){
   document.getElementById("sstrip").innerHTML=s;
 }
 score();
-// --- Blood pressure (private: synced key "bp" only; never in repo/data.json; read-only) ---
-(function(){const $=i=>document.getElementById(i);
-const fmt=d=>new Date(d+"T12:00").toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric"});
-const list=()=>Object.entries(LS("bp")||{}).filter(([k,v])=>v&&v.s).map(([k,v])=>Object.assign({id:k},v)).sort((a,b)=>(b.d+(b.t||"")).localeCompare(a.d+(a.t||"")));
-function render(){const L=list().slice(0,5),last=L[0];
- $("bplast").textContent=last?`Latest: ${fmt(last.d)}${last.t?" "+last.t:""}`:"No readings yet";
- $("bph").innerHTML=L.map(r=>`<li style="display:flex;justify-content:space-between;padding:5px 0;border-top:1px solid var(--c2)"><span>${fmt(r.d)} ${r.t||""}</span><b>${r.s}/${r.di}</b></li>`).join("");}
-render();})();
 });
 </script></body></html>

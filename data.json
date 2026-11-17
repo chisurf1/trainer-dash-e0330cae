@@ -3,9 +3,9 @@
   "challenge": "Easy upper day: Total Gym row + chest press, pushups, a light dumbbell block, and a 30–40 min walk in the dry, sunny afternoon (around 50°F, light wind).",
   "constraint": "",
   "whoop": {
-    "recovery": null,
-    "sleep": null,
-    "strain": null
+    "recovery": 71.0,
+    "sleep": 85.0,
+    "strain": 0.2
   },
   "notes": "",
   "items": [

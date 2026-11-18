@@ -3,11 +3,11 @@
   "challenge": "Easy lower day: Total Gym squats plus a light dumbbell leg block, then a 35–45 min walk in the dry, sunny afternoon (upper 50s°F, breezy).",
   "constraint": "",
   "whoop": {
-    "recovery": null,
-    "sleep": null,
-    "strain": null
+    "recovery": 41.0,
+    "sleep": 89.0,
+    "strain": 0.4
   },
-  "notes": "WHOOP hasn't scored today yet; the 10 AM check will add it.",
+  "notes": "",
   "items": [
     "Total Gym squat 2x12",
     "DB goblet squat 2x12 @ 12 lb",

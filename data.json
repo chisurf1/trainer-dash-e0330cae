@@ -3,9 +3,9 @@
   "challenge": "Easy upper day + warm afternoon walk: Total Gym row & chest press, pushups, light DB curl/press/laterals, then 35–45 min walk (dry, cloudy, mid-60s°F).",
   "constraint": "",
   "whoop": {
-    "recovery": null,
-    "sleep": null,
-    "strain": null
+    "recovery": 39.0,
+    "sleep": 92.0,
+    "strain": 0.7
   },
   "notes": "",
   "items": [

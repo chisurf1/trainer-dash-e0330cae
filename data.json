@@ -1,21 +1,19 @@
 {
-  "date": "2026-11-19",
-  "challenge": "Easy upper day + warm afternoon walk: Total Gym row & chest press, pushups, light DB curl/press/laterals, then 35–45 min walk (dry, cloudy, mid-60s°F).",
+  "date": "2026-11-20",
+  "challenge": "Easy lower + walk day (yellow recovery all week): Total Gym squats, light DB legs, and a 40–45 min walk in the dry, cloudy mid-60s°F afternoon (best ~12–4 PM).",
   "constraint": "",
   "whoop": {
-    "recovery": 39.0,
-    "sleep": 92.0,
-    "strain": 6.7
+    "recovery": null,
+    "sleep": null,
+    "strain": null
   },
   "notes": "",
   "items": [
-    "Total Gym row 2x12",
-    "Total Gym chest press 2x12",
-    "Pushups 2x8–10",
-    "DB curl 2x12 @ 8 lb",
-    "DB overhead press 2x10 @ 8 lb",
-    "DB lateral raise 2x12 @ 5 lb",
-    "DB triceps extension 2x12 @ 8 lb (optional)",
-    "35–45 min walk (~12–4 PM)"
+    "Total Gym squat 2x12",
+    "DB goblet squat 2x12 @ 12 lb",
+    "DB Romanian deadlift 2x10 @ 15 lb",
+    "DB reverse lunge 2x10/leg @ 12 lb",
+    "40–45 min walk (~12–4 PM)",
+    "DB calf raise 2x15 @ 15 lb (optional)"
   ]
 }

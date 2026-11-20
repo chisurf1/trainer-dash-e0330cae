@@ -3,9 +3,9 @@
   "challenge": "Easy lower + walk day (yellow recovery all week): Total Gym squats, light DB legs, and a 40–45 min walk in the dry, cloudy mid-60s°F afternoon (best ~12–4 PM).",
   "constraint": "",
   "whoop": {
-    "recovery": null,
-    "sleep": null,
-    "strain": null
+    "recovery": 49.0,
+    "sleep": 85.0,
+    "strain": 0.4
   },
   "notes": "",
   "items": [

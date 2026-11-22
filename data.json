@@ -3,9 +3,9 @@
   "challenge": "Easy upper + sunny walk: Total Gym row & chest press, pushups, light DB curl/press/laterals, then a 45–50 min walk in the low-60s sun (recovery has been yellow, so keep it smooth).",
   "constraint": "",
   "whoop": {
-    "recovery": null,
-    "sleep": null,
-    "strain": null
+    "recovery": 70.0,
+    "sleep": 86.0,
+    "strain": 6.1
   },
   "notes": "",
   "items": [

@@ -1,21 +1,20 @@
 {
-  "date": "2026-11-21",
-  "challenge": "Easy upper + sunny walk: Total Gym row & chest press, pushups, light DB curl/press/laterals, then a 45–50 min walk in the low-60s sun (recovery has been yellow, so keep it smooth).",
+  "date": "2026-11-22",
+  "challenge": "Easy full-body + walk: Total Gym row & chest press, pushups, DB row and goblet squat, then a 40–45 min walk before the rain (dry ~10 AM–1 PM, near 60°F; showers after 2 PM).",
   "constraint": "",
   "whoop": {
-    "recovery": 70.0,
-    "sleep": 86.0,
-    "strain": 6.1
+    "recovery": null,
+    "sleep": null,
+    "strain": null
   },
   "notes": "",
   "items": [
     "Total Gym row 2x12",
     "Total Gym chest press 2x12",
     "Pushups 2x10",
-    "DB curl 2x12 @ 8 lb",
-    "DB overhead press 2x10 @ 8 lb",
-    "DB lateral raise 2x12 @ 5 lb",
-    "DB triceps extension 2x12 @ 8 lb (optional)",
-    "45–50 min walk (~12–4 PM, sunny, low 60s°F)"
+    "DB bent-over row 2x10 @ 12 lb",
+    "DB goblet squat 2x12 @ 12 lb",
+    "40–45 min walk, 10 AM–1 PM before the rain",
+    "DB calf raise 2x15 @ 15 lb (optional)"
   ]
 }

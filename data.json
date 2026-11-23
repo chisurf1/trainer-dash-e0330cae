@@ -1,20 +1,19 @@
 {
-  "date": "2026-11-22",
-  "challenge": "Easy full-body + walk: Total Gym row & chest press, pushups, DB row and goblet squat, then a 40–45 min walk before the rain (dry ~10 AM–1 PM, near 60°F; showers after 2 PM).",
+  "date": "2026-11-23",
+  "challenge": "Easy lower-body + walk Monday: Total Gym squats, pushups and a short dumbbell leg block, then a brisk 35–40 min walk midday. Dry but cloudy, low 40s°F and breezy, so dress warm.",
   "constraint": "",
   "whoop": {
-    "recovery": 49.0,
-    "sleep": 83.0,
-    "strain": 4.5
+    "recovery": null,
+    "sleep": null,
+    "strain": null
   },
   "notes": "",
   "items": [
-    "Total Gym row 2x12",
-    "Total Gym chest press 2x12",
+    "Total Gym squat 2x12",
     "Pushups 2x10",
-    "DB bent-over row 2x10 @ 12 lb",
     "DB goblet squat 2x12 @ 12 lb",
-    "40–45 min walk, 10 AM–1 PM before the rain",
-    "DB calf raise 2x15 @ 15 lb (optional)"
+    "DB Romanian deadlift 2x10 @ 15 lb",
+    "Brisk 35–40 min walk (~11 AM–2 PM, warmest part of the day)",
+    "DB reverse lunge 2x10/leg @ 12 lb (optional)"
   ]
 }

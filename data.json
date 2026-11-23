@@ -3,9 +3,9 @@
   "challenge": "Easy full-body + walk: Total Gym row & chest press, pushups, DB row and goblet squat, then a 40–45 min walk before the rain (dry ~10 AM–1 PM, near 60°F; showers after 2 PM).",
   "constraint": "",
   "whoop": {
-    "recovery": null,
-    "sleep": null,
-    "strain": null
+    "recovery": 49.0,
+    "sleep": 83.0,
+    "strain": 4.5
   },
   "notes": "",
   "items": [

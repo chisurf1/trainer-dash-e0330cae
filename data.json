@@ -1,19 +1,17 @@
 {
-  "date": "2026-11-23",
-  "challenge": "Easy lower-body + walk Monday: Total Gym squats, pushups and a short dumbbell leg block, then a brisk 35–40 min walk midday. Dry but cloudy, low 40s°F and breezy, so dress warm.",
+  "date": "2026-11-24",
+  "challenge": "Red recovery day (1%, sleep 58%): rest and recover. Easy walk plus gentle mobility only; no dumbbells or hard sets today.",
   "constraint": "",
   "whoop": {
-    "recovery": null,
-    "sleep": null,
-    "strain": null
+    "recovery": 1.0,
+    "sleep": 58.0,
+    "strain": 4.0
   },
   "notes": "",
   "items": [
-    "Total Gym squat 2x12",
-    "Pushups 2x10",
-    "DB goblet squat 2x12 @ 12 lb",
-    "DB Romanian deadlift 2x10 @ 15 lb",
-    "Brisk 35–40 min walk (~11 AM–2 PM, warmest part of the day)",
-    "DB reverse lunge 2x10/leg @ 12 lb (optional)"
+    "Easy 20–30 min walk, conversational pace (~11 AM–2 PM, partly sunny, low 40s°F)",
+    "10 min gentle mobility/stretching (hips, hamstrings, shoulders)",
+    "Total Gym easy squat 1x10, very light (optional)",
+    "Pushups 1x8 easy (optional)"
   ]
 }

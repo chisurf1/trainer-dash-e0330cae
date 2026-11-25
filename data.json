@@ -3,9 +3,9 @@
   "challenge": "Easy rebuild day after two red-recovery days: gentle 30 min walk around midday (overcast, high near 43°F, breezy) plus light Total Gym and pushups; keep it conversational and stop if you feel run down.",
   "constraint": "",
   "whoop": {
-    "recovery": null,
-    "sleep": null,
-    "strain": null
+    "recovery": 42.0,
+    "sleep": 96.0,
+    "strain": 4.9
   },
   "notes": "",
   "items": [

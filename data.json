@@ -1,17 +1,18 @@
 {
-  "date": "2026-11-24",
-  "challenge": "Red recovery day (1%, sleep 58%): rest and recover. Easy walk plus gentle mobility only; no dumbbells or hard sets today.",
+  "date": "2026-11-25",
+  "challenge": "Easy rebuild day after two red-recovery days: gentle 30 min walk around midday (overcast, high near 43°F, breezy) plus light Total Gym and pushups; keep it conversational and stop if you feel run down.",
   "constraint": "",
   "whoop": {
-    "recovery": 3.0,
-    "sleep": 68.0,
-    "strain": 4.0
+    "recovery": null,
+    "sleep": null,
+    "strain": null
   },
   "notes": "",
   "items": [
-    "Easy 20–30 min walk, conversational pace (~11 AM–2 PM, partly sunny, low 40s°F)",
-    "10 min gentle mobility/stretching (hips, hamstrings, shoulders)",
-    "Total Gym easy squat 1x10, very light (optional)",
-    "Pushups 1x8 easy (optional)"
+    "Easy 30 min walk ~11 AM–2 PM (dress for 40°F and wind)",
+    "Total Gym squat 2x12, light incline",
+    "Easy pushups 2x8",
+    "DB curl 2x10 @ 8 lb (optional)",
+    "10 min gentle stretching (optional)"
   ]
 }

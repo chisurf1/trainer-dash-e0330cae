@@ -3,8 +3,8 @@
   "challenge": "Red recovery day (1%, sleep 58%): rest and recover. Easy walk plus gentle mobility only; no dumbbells or hard sets today.",
   "constraint": "",
   "whoop": {
-    "recovery": 1.0,
-    "sleep": 58.0,
+    "recovery": 3.0,
+    "sleep": 68.0,
     "strain": 4.0
   },
   "notes": "",

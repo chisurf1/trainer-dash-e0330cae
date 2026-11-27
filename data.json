@@ -3,9 +3,9 @@
   "challenge": "Thanksgiving: short upper-body session before the rain (after ~10 AM) plus an early walk. Yellow recovery (49%), so keep it moderate and leave room for the feast.",
   "constraint": "Rain after 10 AM, high ~45°F falling to 40, NE wind gusts to 30 mph; travel tomorrow",
   "whoop": {
-    "recovery": 49.0,
-    "sleep": 80.0,
-    "strain": 1.4
+    "recovery": 50.0,
+    "sleep": 84.0,
+    "strain": 5.9
   },
   "notes": "",
   "items": [

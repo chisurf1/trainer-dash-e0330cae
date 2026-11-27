@@ -1,21 +1,19 @@
 {
-  "date": "2026-11-26",
-  "challenge": "Thanksgiving: short upper-body session before the rain (after ~10 AM) plus an early walk. Yellow recovery (49%), so keep it moderate and leave room for the feast.",
-  "constraint": "Rain after 10 AM, high ~45°F falling to 40, NE wind gusts to 30 mph; travel tomorrow",
+  "date": "2026-11-27",
+  "challenge": "Travel day to New York: no gym or dumbbells, so keep it light — walk the airport instead of sitting, a short hotel-room bodyweight set, and an easy city walk. Yellow recovery (43%) after a short night (sleep 48%), so easy pace only.",
+  "constraint": "9:45 AM ET flight from ORD; New Buffalo rain until ~1 PM, high near 47; NYC ~49°F, breezy, chance of showers after 1 PM",
   "whoop": {
-    "recovery": 50.0,
-    "sleep": 84.0,
-    "strain": 5.9
+    "recovery": 43.0,
+    "sleep": 48.0,
+    "strain": 1.7
   },
   "notes": "",
   "items": [
-    "Brisk 30 min walk before 10 AM (beat the rain)",
-    "Total Gym row 2x12",
-    "Total Gym chest press 2x12",
-    "Pushups 2x10",
-    "DB curl 2x12 @ 10 lb",
-    "DB overhead press 2x10 @ 10 lb",
-    "DB lateral raise 2x12 @ 5 lb (optional)",
-    "Easy 15 min post-dinner walk (optional, if the rain lets up)"
+    "Walk the terminal 15–20 min before boarding (skip the moving walkways)",
+    "Stand and stretch calves and hips on the plane every hour",
+    "Pushups 2x10 (hotel room)",
+    "Bodyweight squats 2x15 (hotel room)",
+    "Easy 30 min city walk in NYC (bring a jacket; showers possible after 1 PM)",
+    "Plank 2x30 sec (optional)"
   ]
 }

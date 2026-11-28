@@ -1,19 +1,19 @@
 {
-  "date": "2026-11-27",
-  "challenge": "Travel day to New York: no gym or dumbbells, so keep it light — walk the airport instead of sitting, a short hotel-room bodyweight set, and an easy city walk. Yellow recovery (43%) after a short night (sleep 48%), so easy pace only.",
-  "constraint": "9:45 AM ET flight from ORD; New Buffalo rain until ~1 PM, high near 47; NYC ~49°F, breezy, chance of showers after 1 PM",
+  "date": "2026-11-28",
+  "challenge": "NYC city day: no gym or dumbbells, so make walking the workout — a long easy city walk plus a short hotel-room bodyweight set. Recovery has been yellow (42–50%) with a short night Thursday, so keep it conversational pace; flight home tomorrow.",
+  "constraint": "In New York today; dry and partly sunny, high near 47°F, breezy late morning; dinner at Galileo 8 PM; flight to Chicago tomorrow 10 AM",
   "whoop": {
-    "recovery": 43.0,
-    "sleep": 48.0,
-    "strain": 2.1
+    "recovery": null,
+    "sleep": null,
+    "strain": null
   },
   "notes": "",
   "items": [
-    "Walk the terminal 15–20 min before boarding (skip the moving walkways)",
-    "Stand and stretch calves and hips on the plane every hour",
+    "Easy 45–60 min city walk, late morning to midafternoon (dry, mid-40s; bring a jacket)",
     "Pushups 2x10 (hotel room)",
     "Bodyweight squats 2x15 (hotel room)",
-    "Easy 30 min city walk in NYC (bring a jacket; showers possible after 1 PM)",
-    "Plank 2x30 sec (optional)"
+    "Reverse lunges 2x8 each leg, bodyweight (hotel room)",
+    "Plank 2x30 sec (optional)",
+    "10 min hip and calf stretching before bed (optional)"
   ]
 }
